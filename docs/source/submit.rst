@@ -1,5 +1,5 @@
-Submiting data to CDTK
-======================
+Submitting data to CDTK
+=======================
 
 .. autosummary::
    :toctree: generated
