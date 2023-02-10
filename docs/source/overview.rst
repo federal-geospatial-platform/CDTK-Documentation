@@ -1,8 +1,6 @@
 System overview
 ===============
 
-.. autosummary::
-   :toctree: generated
 
 Description and usage
 ---------------------

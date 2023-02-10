@@ -14,7 +14,7 @@ The purpose of this document is to describe the input information required to ma
 Help resources
 --------------
 
-Support is provided by GeoDiscovery's Data Dissemination Team. To be able to use the CDTK, the user must be added to the CDTK registry. The support is provided to all federal public servants, with a priority to the CCMEO users. Please reach us at geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca for support.
+Support is provided by GeoDiscovery's Data Dissemination Team. To be able to use the CDTK, the user must be added to the CDTK registry. The support is provided to all federal public servants, with a priority to CCMEO users. Please reach us at geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca for support.
 
 Contents
 --------
