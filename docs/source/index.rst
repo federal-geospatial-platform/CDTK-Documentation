@@ -1,49 +1,20 @@
 CCMEO Dissemination Tool Kit (CDTK) Documentation
 =================================================
 
-Purpose
--------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis
-nisi justo, eu volutpat eros ullamcorper vitae. Ut sed scelerisque enim.
-Donec vel lorem imperdiet, tincidunt ex a, mattis nisl. Phasellus
-elementum velit non massa hendrerit pretium. Aliquam ut dui id est
-placerat mattis. Donec vitae pulvinar arcu. Duis feugiat urna tortor, id
-interdum sapien hendrerit nec. Phasellus molestie purus sit amet dolor
-semper, ut bibendum velit luctus.
-
-Scope
------
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis
-nisi justo, eu volutpat eros ullamcorper vitae. Ut sed scelerisque enim.
-Donec vel lorem imperdiet, tincidunt ex a, mattis nisl. Phasellus
-elementum velit non massa hendrerit pretium. Aliquam ut dui id est
-placerat mattis. Donec vitae pulvinar arcu. Duis feugiat urna tortor, id
-interdum sapien hendrerit nec. Phasellus molestie purus sit amet dolor
-semper, ut bibendum velit luctus.
-
 Description and usage
 ---------------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis
-nisi justo, eu volutpat eros ullamcorper vitae. Ut sed scelerisque enim.
-Donec vel lorem imperdiet, tincidunt ex a, mattis nisl. Phasellus
-elementum velit non massa hendrerit pretium. Aliquam ut dui id est
-placerat mattis. Donec vitae pulvinar arcu. Duis feugiat urna tortor, id
-interdum sapien hendrerit nec. Phasellus molestie purus sit amet dolor
-semper, ut bibendum velit luctus.
+The Canada Centre for Mapping and Earth Observation (CCMEO) Dissemination Tool Kit (CDTK) allows users to instantiate geospatial services in a controlled data repository. Standardization of the repository structure and its access mechanism ensures the integrity of the data and services published in the CDTK. QGIS Server, pyQGIS and PostgreSQL database deployed in a cloud environment form the infrastructure behind the CDTK. The cluster also incorporates a shared storage, an FTP server, a database, and many other components needed by the system to perform its tasks.
+
+Purpose
+-------
+
+The purpose of this document is to describe the input information required to make the CDTK services work properly. It explains how to create the different input packages used by its users to launch the CDTK services. It is intended for use by anyone who has the rights to submit data and web services to the CDTK with the possibility for its clients who have less expertise in creating geospatial services to be able to publish geospatial data on its own.
 
 Help resources
 --------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis
-nisi justo, eu volutpat eros ullamcorper vitae. Ut sed scelerisque enim.
-Donec vel lorem imperdiet, tincidunt ex a, mattis nisl. Phasellus
-elementum velit non massa hendrerit pretium. Aliquam ut dui id est
-placerat mattis. Donec vitae pulvinar arcu. Duis feugiat urna tortor, id
-interdum sapien hendrerit nec. Phasellus molestie purus sit amet dolor
-semper, ut bibendum velit luctus.
+Support is provided by GeoDiscovery's Data Dissemination Team. To be able to use the CDTK, the user must be added to the CDTK registry. The support is provided to all federal public servants, with a priority to the CCMEO users. Please reach us at geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca for support.
 
 Contents
 --------
@@ -52,8 +23,10 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   usage
+   overview
 
-   api
+   data
 
-   test
+   submit
+   
+   use

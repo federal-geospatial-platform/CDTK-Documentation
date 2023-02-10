@@ -1,7 +1,6 @@
-API
-===
+System overview
+===============
 
 .. autosummary::
    :toctree: generated
 
-   lumache
