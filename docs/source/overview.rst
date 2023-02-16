@@ -12,8 +12,8 @@ available publicly on the internet.
 
 -  Support for OGC W*S and OGC APIs Standards.
 
-	1.1. Workflow overview
--------------------------
+1.1. Workflow overview
+----------------------
 
 The CDTK…
 
@@ -22,27 +22,27 @@ The CDTK…
    :width: 6.5in
    :height: 4.2875in
 
-	1.2. Infrastructure tiers
------------------------------
+1.2. Infrastructure tiers
+-------------------------
 
 À remplir
 
-		1.2.1. Client tier
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.2.1. Client tier
+~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-		1.2.1. Logic tier
-~~~~~~~~~~~~~~~~~~~~~~~~~
+1.2.1. Logic tier
+~~~~~~~~~~~~~~~~~
 
 À remplir
 
-		1.2.1. Data tier
-~~~~~~~~~~~~~~~~~~~~~~~~
+1.2.1. Data tier
+~~~~~~~~~~~~~~~~
 
 À remplir
 
-	1.3. Clip-Zip-Ship
-----------------------
+1.3. Clip-Zip-Ship
+------------------
 
 À remplir
