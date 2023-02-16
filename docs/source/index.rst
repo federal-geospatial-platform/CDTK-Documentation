@@ -39,7 +39,6 @@ Contents
 --------
 
 .. toctree::
-   :numbered:
 
 	overview
 	
