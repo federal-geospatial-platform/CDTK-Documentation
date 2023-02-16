@@ -21,19 +21,24 @@
 2.2. QGIS Project
 -----------------
 
-À remplir
+À remplir NAMING CONVENTION
 
 2.2.1. Converting from ESRI MXD file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-2.2.2. Project properties
+2.2.2. Map and data projection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+À venir
+
+2.2.3. Project properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-2.2.3. Layer properties
+2.2.4. Layer properties
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
