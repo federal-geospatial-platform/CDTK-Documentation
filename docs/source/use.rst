@@ -1,26 +1,24 @@
-Using the results
-=================
+4. Using the results
+====================
 
 À remplir
 
-Web services
-------------
+4.1. Web services
+-----------------
 
 À remplir
 
-GetCapabilities
-~~~~~~~~~~~~~~~
+4.1.1. GetCapabilities
+~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-GetMap
-~~~~~~
+4.1.2. GetMap
+~~~~~~~~~~~~~
 
 À remplir
 
-.. _downloads-1:
-
-Downloads
----------
+4.2. Downloads
+--------------
 
 À remplir
