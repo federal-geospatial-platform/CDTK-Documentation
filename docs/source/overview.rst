@@ -1,18 +1,44 @@
 System overview
 ===============
 
+The CDTK is based on the QGIS Server technology and produces web
+services that follow the OGC standards. Vector datasets are stored in a
+PostGIS database while raster datasets can be hosted on any source
+available publicly on the internet.
 
-Description and usage
----------------------
+-  Open-Source solution.
 
-The Canada Centre for Mapping and Earth Observation (CCMEO) Dissemination Tool Kit (CDTK) allows users to instantiate geospatial services in a controlled data repository. Standardization of the repository structure and its access mechanism ensures the integrity of the data and services published in the CDTK. QGIS Server, pyQGIS and PostgreSQL database deployed in a cloud environment form the infrastructure behind the CDTK. The cluster also incorporates a shared storage, an FTP server, a database, and many other components needed by the system to perform its tasks.
+-  Containerized deployment in AWS Cloud.
 
-Purpose
--------
+-  Support for OGC W*S and OGC APIs Standards.
 
-The purpose of this document is to describe the input information required to make the CDTK services work properly. It explains how to create the different input packages used by its users to launch the CDTK services. It is intended for use by anyone who has the rights to submit data and web services to the CDTK with the possibility for its clients who have less expertise in creating geospatial services to be able to publish geospatial data on its own.
+   1. .. rubric:: Workflow overview
+         :name: workflow-overview
 
-Help resources
---------------
+The CDTK…
 
-Support is provided by GeoDiscovery's Data Dissemination Team. To be able to use the CDTK, the user must be added to the CDTK registry. The support is provided to all federal public servants, with a priority to the CCMEO users. Please reach us at geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca for support.
+.. image:: media/image1.png
+   :alt: Diagram Description automatically generated
+   :width: 6.5in
+   :height: 4.2875in
+
+2. .. rubric:: Infrastructure tiers
+      :name: infrastructure-tiers
+
+   1. .. rubric:: Client tier
+         :name: client-tier
+
+À remplir
+
+Logic tier
+----------
+
+À remplir
+
+Data tier
+---------
+
+À remplir
+
+Clip-Zip-Ship
+-------------
