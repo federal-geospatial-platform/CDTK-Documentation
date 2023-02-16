@@ -1,5 +1,5 @@
-System overview
-===============
+1. System overview
+==================
 
 The CDTK is based on the QGIS Server technology and produces web
 services that follow the OGC standards. Vector datasets are stored in a
@@ -12,8 +12,8 @@ available publicly on the internet.
 
 -  Support for OGC W*S and OGC APIs Standards.
 
-   1. .. rubric:: Workflow overview
-         :name: workflow-overview
+	1.1. Workflow overview
+-------------------------
 
 The CDTK…
 
@@ -22,23 +22,27 @@ The CDTK…
    :width: 6.5in
    :height: 4.2875in
 
-2. .. rubric:: Infrastructure tiers
-      :name: infrastructure-tiers
-
-   1. .. rubric:: Client tier
-         :name: client-tier
+	1.2. Infrastructure tiers
+-----------------------------
 
 À remplir
 
-Logic tier
-----------
+		1.2.1. Client tier
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-Data tier
----------
+		1.2.1. Logic tier
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 À remplir
 
-Clip-Zip-Ship
--------------
+		1.2.1. Data tier
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+À remplir
+
+	1.3. Clip-Zip-Ship
+----------------------
+
+À remplir
