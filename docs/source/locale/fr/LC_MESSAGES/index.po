@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Natural resources Canada, Her Majesty the King in
+# right of Canada
+# This file is distributed under the same license as the CDTK Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CDTK Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-16 13:54-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/index.rst:2
+msgid "CCMEO Dissemination Tool Kit (CDTK) Documentation"
+msgstr ""
+
+#: ../../source/index.rst:5
+msgid "Description and usage"
+msgstr "Description et utilisation"
+
+#: ../../source/index.rst:7
+msgid ""
+"The Canada Centre for Mapping and Earth Observation (CCMEO) Dissemination"
+" Tool Kit (CDTK) allows users to instantiate geospatial services in a "
+"controlled data repository. Standardization of the repository structure "
+"and its access mechanism ensures the integrity of the data and services "
+"published in the CDTK. QGIS Server, pyQGIS and PostgreSQL database "
+"deployed in a cloud environment form the infrastructure behind the CDTK. "
+"The cluster also incorporates a shared storage, an FTP server, a "
+"database, and many other components needed by the system to perform its "
+"tasks."
+msgstr ""
+
+#: ../../source/index.rst:18
+msgid "Purpose"
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid ""
+"The purpose of this document is to describe the input information "
+"required to make the CDTK services work properly. It explains how to "
+"create the different input packages used by its users to launch the CDTK "
+"services. It is intended for use by anyone who has the rights to submit "
+"data and web services to the CDTK with the possibility for its clients "
+"who have less expertise in creating geospatial services to be able to "
+"publish geospatial data on its own."
+msgstr ""
+
+#: ../../source/index.rst:29
+msgid "Help resources"
+msgstr ""
+
+#: ../../source/index.rst:31
+msgid ""
+"Support is provided by GeoDiscovery’s Data Dissemination Team. To be able"
+" to use the CDTK, the user must be added to the CDTK registry. The "
+"support is provided to all federal public servants, with a priority to "
+"the CCMEO users. Please reach us at `geodiscoverydatadissemination-"
+"diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca <mailto"
+":geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte%40nrcan-"
+"rncan.gc.ca>`__ for support."
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid "Contents"
+msgstr ""
+

@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Natural resources Canada, Her Majesty the King in
+# right of Canada
+# This file is distributed under the same license as the CDTK Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CDTK Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-16 13:54-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../source/data.rst:2
+msgid "2. Preparing the data"
+msgstr ""
+
+#: ../../source/data.rst:4 ../../source/data.rst:9 ../../source/data.rst:14
+#: ../../source/data.rst:19 ../../source/data.rst:29 ../../source/data.rst:39
+#: ../../source/data.rst:44 ../../source/data.rst:49
+msgid "À remplir"
+msgstr ""
+
+#: ../../source/data.rst:7
+msgid "2.1. Data"
+msgstr ""
+
+#: ../../source/data.rst:12
+msgid "2.1.1. Vector data"
+msgstr ""
+
+#: ../../source/data.rst:17
+msgid "2.1.2. Raster data"
+msgstr ""
+
+#: ../../source/data.rst:22
+msgid "2.2. QGIS Project"
+msgstr ""
+
+#: ../../source/data.rst:24
+msgid "À remplir NAMING CONVENTION"
+msgstr ""
+
+#: ../../source/data.rst:27
+msgid "2.2.1. Converting from ESRI MXD file"
+msgstr ""
+
+#: ../../source/data.rst:32
+msgid "2.2.2. Map and data projection"
+msgstr ""
+
+#: ../../source/data.rst:34
+msgid "À venir"
+msgstr ""
+
+#: ../../source/data.rst:37
+msgid "2.2.3. Project properties"
+msgstr ""
+
+#: ../../source/data.rst:42
+msgid "2.2.4. Layer properties"
+msgstr ""
+
+#: ../../source/data.rst:47
+msgid "2.3. Downloads"
+msgstr ""
+
