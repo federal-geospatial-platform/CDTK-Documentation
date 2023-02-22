@@ -17,8 +17,7 @@ available publicly on the internet.
 
 The CDTK…
 
-.. image:: media/image1.png
-   :alt: Diagram Description automatically generated
+.. image:: media/publication_schema.png
    :width: 6.5in
    :height: 4.2875in
 
@@ -41,6 +40,8 @@ The CDTK…
 ~~~~~~~~~~~~~~~~
 
 À remplir
+
+.. _czs-ref:
 
 1.3. Clip-Zip-Ship
 ------------------
