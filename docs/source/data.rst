@@ -28,6 +28,8 @@ Any type of raster data is supported be the CDTK. The data has to by stored by t
 In order to publish web services with the CDTK, the user needs to create one QGIS project file for each official language. The only format supported is ".qgs", ".qgz" is **not supported**. The projects have to be named with the following naming convention:
 
 	* Project file names are in lower case.
+	* The first character of the project file name must be a letter.
+	* Only unaccented alphanumeric characters and underscores are allowed.
 	* The English project file name ends with **"_en"**.
 	* The French project file name ends with **"_fr"**.
 	* The basenames of both projects are identical (i.e.: major_projects_en and major_projects_fr).
