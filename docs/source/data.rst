@@ -131,4 +131,10 @@ As for the project properties, each layer has to be configured individually with
 2.3. Downloads
 --------------
 
-À remplir
+The CDTK includes a public FTP distribution site where the user can make files available for download. The process of uploading these files is integrated to the CDTK publication mecanism. 
+
+	1. Create a distinct folder containing all the files and subfolders to be stored on the FTP site.
+	
+	2. Compress this folder into a .zip file (other extensions not supported).
+	
+The download package is now ready to be joined to the publication (see :ref:`submit-ref` section).
