@@ -25,6 +25,8 @@ data and web services to the CDTK with the possibility for its clients
 who have less expertise in creating geospatial services to be able to
 publish geospatial data on its own.
 
+.. _help:
+
 Help resources
 --------------
 

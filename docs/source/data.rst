@@ -4,12 +4,12 @@
 2.1. Data
 ---------
 
-The CDTK support most GIS data formats, but there is some minimum settings required to make the publication workflow work.
+The user of the CDTK can use the Data Dissemination Repository (DDR) to publish web services, downloadable files and Clip-Zip-Ship collections. The DDR support most GIS data formats, but there is some minimum settings required to make the publication workflow work.
 
 2.1.1. Vector data
 ~~~~~~~~~~~~~~~~~~
 
-All vector data is stored in a PostGIS database on the CDTK servers. The input data must be contained in a OGC Geopackage (GPKG) to be ingested by the CDTK. If the user is using the CDTK QGIS plugin to publish the data (see section  :ref:`qgis-plugin-ref`), then the vector layers will be automatically converted to a GPKG no matter the source format. If the user chooses the input package method (see section :ref:`directory-watcher-ref`), the source of the vector layers has to be stored in a GPKG included in the package.
+All vector data is stored in a PostGIS database on the DDR servers. The input data must be contained in a OGC Geopackage (GPKG) to be ingested by the DDR. If the user is using the DDR QGIS plugin to publish the data (see section  :ref:`qgis-plugin-ref`), then the vector layers will be automatically converted to a GPKG no matter the source format. If the user chooses the input package method (see section :ref:`directory-watcher-ref`), the source of the vector layers has to be stored in a GPKG included in the package.
 
 	* **Using the QGIS plugin method**: Any vector format supported.
 	
@@ -20,12 +20,12 @@ All vector data is stored in a PostGIS database on the CDTK servers. The input d
 2.1.2. Raster data
 ~~~~~~~~~~~~~~~~~~
 
-Any type of raster data is supported be the CDTK. The data has to by stored by the user on a web server accessible to the CDTK. The data is not copied to the CDTK servers, it remains in its original location and the web service produced calls and displays the data from its source. If the data source is not available, then the raster layer in the web service will fail to load.
+Any type of raster data is supported be the DDR. The data has to by stored on a web server accessible to the DDR. If the web services created are accessible publicly, the raster needs to be hosted on a public server as well. The data is not copied to the DDR servers, it remains in its original location and the web service produced calls and displays the data from its source. If the data source is not available, then the raster layer in the web service will fail to load.
 
 2.2. QGIS Project
 -----------------
 
-In order to publish web services with the CDTK, the user needs to create one QGIS project file for each official language. The only format supported is ".qgs", ".qgz" is **not supported**. The projects have to be named with the following naming convention:
+In order to publish web services with the DDR, the user needs to create one QGIS project file for each official language. The only format supported is ".qgs", ".qgz" is **not supported**. The projects have to be named with the following naming convention:
 
 	* Project file names are in lower case.
 	* The first character of the project file name must be a letter.
@@ -45,7 +45,7 @@ In order to publish web services with the CDTK, the user needs to create one QGI
 2.2.2. Map and data projection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The CDTK only support the 6 Coordinate Reference Systems (CRS) below. All the layers need to have the same CRS than the project.
+The DDR only support the 6 Coordinate Reference Systems (CRS) below. All the layers need to have the same CRS than the project.
 
 	+------+---------------------------------------------+
 	| EPSG | Description                                 |
@@ -104,7 +104,7 @@ As for the project properties, each layer has to be configured individually with
 
 	* The corresponding layer in the other language's project must have the exact **same short name**.
 	
-	* There is no need to fill the other fields in that tab as any information inputed in the "Metadata" will be automatically copied over to the "QGIS Server" tab by the CDTK process.
+	* There is no need to fill the other fields in that tab as any information inputed in the "Metadata" will be automatically copied over to the "QGIS Server" tab by the DDR process.
 
 
 * Suggested:
@@ -131,7 +131,7 @@ As for the project properties, each layer has to be configured individually with
 2.3. Downloads
 --------------
 
-The CDTK includes a public FTP distribution site where the user can make files available for download. The process of uploading these files is integrated to the CDTK publication mecanism. 
+The CDTK includes a public FTP distribution site where the user can make files available for download. The process of uploading these files is integrated to the DDR publication mecanism. 
 
 	1. Create a distinct folder containing all the files and subfolders to be stored on the FTP site.
 	
