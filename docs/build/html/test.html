@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOP-4401 – DDR Input Package Creation &mdash; CDTK Documentation 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/cdtk.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="API" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CDTK Documentation
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SOP-4401 – DDR Input Package Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scope">Scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#responsibility-in-fgp">Responsibility in FGP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#records-and-references">Records and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-and-usage">Description and Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish-and-update-input-package-creation">Publish and Update Input Package Creation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#esri-file-geodatabases-fgdb">Esri File Geodatabases (FGDB)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#esri-map-documents-mxd">Esri Map Documents (.mxd)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#symbology">Symbology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#label">Label</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#package-control-file">Package Control file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-set-of-ancillary-files-for-download">A set of Ancillary files (for download)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fgp-naming-conventions">FGP Naming Conventions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generic-naming-standards">Generic Naming Standards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#official-languages">Official Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#appendix-a-naming-conventions">Appendix A: Naming conventions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-geodatabase-fgdb-naming-standard">File Geodatabase (FGDB) Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#files-geodatabase-fgdb-feature-class-naming-standard">Files Geodatabase (FGDB); Feature Class Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#files-geodatabase-fgdb-field-naming-standard">Files Geodatabase (FGDB); Field Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#files-geodatabase-fgdb-field-alias-naming-standard">Files Geodatabase (FGDB); Field alias Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mxd-file-naming-standard">MXD File Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-service-naming-standard">Map Service Naming Standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-service-layers-naming-standard-in-the-mxd">Map Service; Layers Naming Standard (in the mxd)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-service-field-naming-standard-in-the-mxd">Map Service; Field Naming Standard (in the mxd)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CDTK Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SOP-4401 – DDR Input Package Creation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/test.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Table 1: Metadata Field Description</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><img alt="vertopal_40208e89b75" src="vertopal_40208e89b75" />
+<dl class="simple">
+<dt>1415fb056b7bec6b8446b/media/image1.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p>6.425in</p>
+</dd>
+<dt class="field-even">height<span class="colon">:</span></dt>
+<dd class="field-even"><p>1.475in</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><strong>FGP Standard Operating Procedure</strong></p>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Category: Federal Geospatial Platform</p></td>
+<td></td>
+<td><p>Doc type:
+<strong>Procedure</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Filename:
+<strong>SOP44
+01-DDRInputPackageCreation_aa03.docx</strong></p></td>
+<td><p>SOP
+Number:</p>
+<p>SOP-4401</p>
+</td>
+<td><p>Date:
+<strong>2016-12-23</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Version Issue and Status: <strong>aa03 open
+draft</strong></p></td>
+<td><p>SOP
+C
+ategory:
+4000
+Data</p>
+<p>Sub-c
+ategory:
+4400
+Data
+Disse
+mination
+Re
+pository</p>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="sop-4401-ddr-input-package-creation">
+<h1>SOP-4401 – DDR Input Package Creation<a class="headerlink" href="#sop-4401-ddr-input-package-creation" title="Permalink to this heading"></a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading"></a></h2>
+<p>The purpose of this document is to describe the input information
+required to make the Data Dissemination Repository (DDR) services work
+properly. It explains how to create the different input packages used by
+the Contributor Support Team to launch the DDR services. It is intended
+for use by anyone who has the rights to submit data and Web services to
+the DDR with the possibility for Client Departments who have less
+expertise in creating geospatial services to be assisted by the
+Contributor Support Team.</p>
+</section>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this heading"></a></h2>
+<p>This procedure applies to all input package creation. When it comes to
+submitting it to the FGP DDR subsystem, client departments must contact
+the contributors support team who will complete the process in their
+name. This situation will remain as long as the FGP access control and
+cost model are not completely defined and implemented. In the future,
+Client Departments will have the ability to submit their package
+themselves, with or without Contributor Support Team assistance.</p>
+</section>
+<section id="responsibility-in-fgp">
+<h2>Responsibility in FGP<a class="headerlink" href="#responsibility-in-fgp" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Table 2: Naming Concatenation Table</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><strong>A
+uthority</strong></p></td>
+<td><p>FGP DDR Team Lead</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>C
+ontributor
+Support
+Team</strong></p></td>
+<td><p>The CST is the interface between the contributor and
+the Catalogue, the DDR storage, and the web services
+group.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Client
+Services
+Help</strong></p></td>
+<td><p>The CS Help team assist the contributor in the
+preparation of the DDR input package.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="records-and-references">
+<h2>Records and References<a class="headerlink" href="#records-and-references" title="Permalink to this heading"></a></h2>
+<p><strong>UUID</strong> Use this reference
+<a class="reference external" href="http://www.gcpedia.gc.ca/wiki/Federal_Geospatial_Platform/Policies_and_Standards/Catalogue/Release">http://www.gcpedia.gc.ca/wiki/Federal_Geospatial_Platform/Policies_and_Standards/Catalogue/Release</a></p>
+<p><strong>Naming Convention</strong> Use the Federal Geospatial Platform/Policies and
+Standards/Catalogue/Release/Appendix B Guidelines.</p>
+<p><strong>Metadata Excel Spreadsheet Template</strong> &lt;enter the name of the
+spreadsheet template here&gt;</p>
+<p><strong>Thesaurus</strong> You can find the core subject thesaurus at
+<a class="reference external" href="http://www.thesaurus.gc.ca/default.asp?lang=En&amp;n=EAEAD1E6-1">http://www.thesaurus.gc.ca/default.asp?lang=En&amp;n=EAEAD1E6-1</a></p>
+<p><strong>Data Projections</strong> FGP contributors are strongly encouraged to make
+their data available in one or more of the four projections presented
+here in order of preference:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>NAD83 / Canada Atlas Lambert EPSG:3978 <a class="reference external" href="http://epsg.io/3978">&gt;</a></dt><dd><p><a class="reference external" href="http://epsg.io/3978">http://epsg.io/3978</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>WGS84 / Pseudo-Mercator EPSG:3857 <a class="reference external" href="http://epsg.io/3857">&gt;</a></dt><dd><p><a class="reference external" href="http://epsg.io/3857">http://epsg.io/3857</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>NAD83 (CSRS) / Canada Atlas Lambert EPSG:3979</dt><dd><p><a class="reference external" href="http://epsg.io/3979">&gt;</a> <a class="reference external" href="http://epsg.io/3979">http://epsg.io/3979</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>NAD83 (CSRS) EPSG:4617 <a class="reference external" href="http://epsg.io/4617">&gt;</a></dt><dd><p><a class="reference external" href="http://epsg.io/4617">http://epsg.io/4617</a></p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="description-and-usage">
+<h2>Description and Usage<a class="headerlink" href="#description-and-usage" title="Permalink to this heading"></a></h2>
+<p>The DDR is a subsystem of the FGP which, combined with the catalog,
+allows users to instantiate geospatial services in a controlled data
+repository. Standardization of the repository structure and its access
+mechanism ensures the integrity of the data and services published in
+the FGP. ArcGIS and FME deployed on a cluster of servers form the
+infrastructure behind DDR.</p>
+<p>The cluster also incorporates a shared storage, an FTP server, a
+database, and many other components needed by the system to perform its
+tasks.</p>
+<p>Refer to Figure 1, below. DDR offers three different services: publish,
+unpublish and update. To publish, the metadata entry must precede a call
+to the FGP catalogue. At the end of a successful link, the user receives
+an email with the URL link to perform an online resource update to the
+catalogue.</p>
+<p>The unpublish service allows the user to delete the downloadable data
+and map services that are not needed anymore in the DDR.</p>
+<p>The update service is a way of chaining the two previous services in
+order to completely unpublish and republish the downloadable data and
+map services to the DDR.</p>
+<a class="reference internal image-reference" href="vertopal_40208e89b751415fb056b7bec6b8446b/media/image2.png"><img alt="vertopal_40208e89b751415fb056b7bec6b8446b/media/image2.png" src="vertopal_40208e89b751415fb056b7bec6b8446b/media/image2.png" style="width: 6.5in; height: 4.04236in;" /></a>
+<p>Figure 1: DDR Input Package Creation</p>
+<section id="publish-and-update-input-package-creation">
+<h3>Publish and Update Input Package Creation<a class="headerlink" href="#publish-and-update-input-package-creation" title="Permalink to this heading"></a></h3>
+<p>The publish and update services use the same input package to capture
+the needed parameters to perform their respective tasks. There is an
+Excel spreadsheet template to facilitate the collection of needed
+information. The following sections describe the sections found in the
+Excel template.</p>
+<p>The standard input to the DDR publish service is a set of files
+organized as a package. The package must be compressed (zipped) to ease
+transfer and conserve disk space. All files must be put in the input
+package root directory. This section presents the files that may be
+added into the input package, depending on whether web services or
+download services are requested.</p>
+<section id="esri-file-geodatabases-fgdb">
+<h4>Esri File Geodatabases (FGDB)<a class="headerlink" href="#esri-file-geodatabases-fgdb" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>There should be one FGDB for French and one for English or only one
+bilingual FGDB.</p></li>
+<li><p>FGDB at release 10.1 or better.</p></li>
+<li><p>FGDB Feature Classes spatial reference system must be the same as the
+one set in the Data Frame Properties of ArcMap. In addition, the
+selected spatial reference system should be the same as the one
+targeted for the viewer (see Appendix A: Naming conventions).The base
+map selected uses the spatial reference system used by the viewer. If
+the spatial reference system is not the same, re-projection will need
+to occur.</p></li>
+<li><p>Each of the feature class in the FGDB:</p></li>
+<li><p>Contains only one type of feature (for example, only points or only
+lines or only polygons)</p></li>
+<li><p>Contains only simple 2D or 3D features.</p></li>
+<li><p>May contain multi-parts or single-part features.</p></li>
+<li><p>May contain features with elevation (z) and measures (m).</p></li>
+<li><p>Follows the proposed naming convention (see Files Geodatabase (FGDB);
+Feature Class Naming Standard).</p></li>
+<li><p>Have one or more attributes characterizing each feature beyond the
+unique system identifier (OBJECTID).</p></li>
+<li><p>Follows the proposed attributes naming convention (see Appendix A:
+Naming conventions<a class="reference external" href="#appendix-a-naming-conventions">10</a>).</p></li>
+<li><p>If there is more than one feature class in the FGDB, then all feature
+classes should represent a consistent theme. For example, Hydrography
+theme made of different feature classes – such as major rivers,
+secondary rivers, creeks, springs, barrage, and rapids. They should
+be describable by a single metadata records and publishable as a
+single Map Service containing one layer for each of the layers in the
+MXD Map document. If these conditions are not met, then thematic
+grouping should be considered as separate data sets and thus be
+separated in their own FGDB and enter FGP as distinct data sets;</p></li>
+<li><p>If multiple feature classes have the same theme, the same feature
+type, the same attributes, and only differ by geographic extent, for
+example, municipal, province, and NTS decoupage. Attempt to merge
+these feature classes into one single feature class that does not
+contain feature overlaps. During the merging operation, it is not
+necessary to dissolve the entities to remove the intersections at the
+original data sets boundaries as this may lead to issues regarding
+the FGDB Feature Classes content limits, for example, the maximum
+number of vertices for a single feature.</p></li>
+<li><p>The FGDB file follows the defined naming convention (see Appendix A:
+Naming conventions. on page <a class="reference external" href="#appendix-a-naming-conventions">10</a>).</p></li>
+<li><p>The final FGDB must be zipped in a single file.</p></li>
+</ul>
+</section>
+</section>
+<section id="esri-map-documents-mxd">
+<h3>Esri Map Documents (.mxd)<a class="headerlink" href="#esri-map-documents-mxd" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>There should be one MXD for French and one for English or only one
+bilingual MXD;</p></li>
+<li><p>The MXD must contain each of the Feature Classes contained in the
+FGDB as layers in the map document;</p></li>
+<li><p>Layers must be assigned for each of the feature layers according to
+the contributor’s requirements. The symbology can be:</p></li>
+<li><p>The same for all the features in the layer (Features).</p></li>
+<li><p>Based on the unique value of one or more attributes (Categories).</p></li>
+<li><p>Based on the graduated or proportional normalized value of one
+attribute (Quantities).</p></li>
+<li><p>Based on the value of one or more attributes (Charts).</p></li>
+<li><p>Based on the quantities of one or more attributes (Multiple
+Attributes).</p></li>
+<li><p>Layers can have a scale dependency defined to avoid drawing all
+features at all the viewing scales.</p></li>
+<li><p>Layers can have labelling activated to display feature names or an
+important feature characteristic. Label classes can be defined and
+associated to scale dependencies to avoid drawing the labels at all
+scales.</p></li>
+<li><p>The Map documents may contain “Group Layers”.</p></li>
+<li><p>The Map documents must contain only layers to publish in the Map
+service (must not contain a base map).</p></li>
+<li><p>The Map documents should be saved with the full spatial extent;</p></li>
+<li><p>The Map documents name should be the same as the Service name and the
+FGDB name (see section).</p></li>
+<li><p>The Coordinate system should be defined in the Data Frame Properties
+tab and must be the same as the data (see Coordinate System section).</p></li>
+<li><p>The following fields must be activated in the Layer fields tab:</p></li>
+<li><p>SHAPE</p></li>
+<li><p>OBJECTID</p></li>
+<li><p>The fields used for the symbolisation</p></li>
+<li><p>All the desired fields in the Map Service</p></li>
+<li><p>Refer to Figure 2, below. In the <strong>Layer Properties</strong> click on the
+<strong>Display</strong> tab. In the <strong>Display Expression</strong> area, set the
+<strong>Field:</strong> to <strong>Provider</strong>. The FGP viewer uses this field to display
+automatically a value when the cursor passes over a feature.</p></li>
+</ul>
+<a class="reference internal image-reference" href="vertopal_40208e89b751415fb056b7bec6b8446b/media/image3.png"><img alt="vertopal_40208e89b751415fb056b7bec6b8446b/media/image3.png" src="vertopal_40208e89b751415fb056b7bec6b8446b/media/image3.png" style="width: 3.59449in; height: 2.79134in;" /></a>
+<p>Figure 2: Setting Display Expression</p>
+<section id="symbology">
+<h4>Symbology<a class="headerlink" href="#symbology" title="Permalink to this heading"></a></h4>
+<p>Complex symbology should be avoided (multilevel symbols, hatched or
+other pattern in surfaces) because they can slow down the service
+response time. This is even more important if the service has a large
+number of features and vertices or more than one layer. Follow these
+recommendations:</p>
+<ul class="simple">
+<li><p>Avoid complex symbology.</p></li>
+<li><p>Use simple lines.</p></li>
+<li><p>Use simple surface (no pattern).</p></li>
+<li><p>Point symbology can be more complex with limited effect on the
+response time.</p></li>
+<li><p>If possible, remove as much vertices as possible.</p></li>
+<li><p>If possible, merge features to reduce number of feature in the
+service.</p></li>
+</ul>
+</section>
+<section id="label">
+<h4>Label<a class="headerlink" href="#label" title="Permalink to this heading"></a></h4>
+<p>Currently, the FGP viewer cannot display labels from ESRI Map Service.</p>
+</section>
+</section>
+<section id="package-control-file">
+<h3>Package Control file<a class="headerlink" href="#package-control-file" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The configuration file contains all the relevant information about
+the package content. The following information is essential in order
+to provide the necessary minimum input to the DDR system to work
+properly.</p></li>
+<li><p>For the first version of the DDR, an Excel file will be used to
+gather all the information needed. The FGP Contributor Support Team
+can provide an Excel.</p></li>
+<li><p>The DDRConfigFile is divided in 1/3 main sections – General</p></li>
+<li><p>Publisher information (username and email)</p></li>
+<li><p>Metadata File Identifier</p></li>
+<li><p>This field makes the link with the FGP Catalogue. To find this ID,
+select the targeted geospatial record in the FGP Catalogue and scroll
+down to the <strong>File Identifier</strong> in the <strong>Additional Information</strong>
+section.</p></li>
+<li><p>ArcGIS Server ID (optional)</p></li>
+<li><p>This information is not necessary if you want to use the default
+ArcGIS Server ID that is set to your department in the DDR Registry.
+If you want to use another ArcGIS Server licence, register it in the
+registry (see the DDR AdminGuide) and enter the ID here.</p></li>
+<li><p>Download repository ID (FTP Site) (Optional)</p></li>
+<li><p>This information is not necessary if you want to use the default
+Download repository ID that is set to your department in the DDR
+Registry. If you want to use another Download repository ID, register
+it in the registry (see the DDR AdminGuide) and enter the ID here.</p></li>
+<li><p>Core Subject term</p></li>
+<li><p>Choose a subject term in the downloadable version (.csv) available on
+the Government of Canada Core Subject Thesaurus
+(<a class="reference external" href="http://www.thesaurus.gc.ca/default.asp?lang=En&amp;n=EAEAD1E6-1">http://www.thesaurus.gc.ca/default.asp?lang=En&amp;n=EAEAD1E6-1</a>).</p></li>
+<li><p>The DDRConfigFile is divided in 2/3 main sections – Map Service</p></li>
+<li><p>This section gives details to help realize the Web Map Service
+Publication. If no service publication is requested, this section
+must be left empty.</p></li>
+<li><p>In the Map Service Information subsection (upper subsection), Service
+1 and 2 columns refer to a possible French and English publication.
+Both columns must be filled if two FGDB are provided, one French and
+one English.</p></li>
+<li><p>Fill the Service 1 column only if a bilingual FGDB is provided.</p></li>
+<li><p>Service Name</p></li>
+<li><p>The service will not be published if Service Name is not filled, see
+Map Service Naming Standard section.</p></li>
+<li><p>Map Document Filename (.mxd)</p></li>
+<li><p>Name of the MXD file, see MXD File Naming Standard section.</p></li>
+<li><p>Dataset Filename (FGDB)</p></li>
+<li><p>Name of the FGDB file (see section)</p></li>
+<li><p>FGDB files must also be zipped in a single file.</p></li>
+<li><p>Service Folder Name</p></li>
+<li><p>This gives the sub folder of ArcGIS Server where the service will be
+deployed. The TBS acronym (upper cases) of your department in English
+is a good choice!</p></li>
+<li><p>Services Capabilities</p></li>
+<li><p>This section includes service parameters for Web service
+customisation.</p></li>
+<li><p>In the Map Service Metadata subsection (lower subsection),</p></li>
+<li><p>Each metadata field description must be given in French and in
+English in order to have bilingual metadata.</p></li>
+<li><p>The Table 1, below gives a brief description of each metadata field.</p></li>
+</ul>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Table 3: Feature Class Naming Standard</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Met
+adata</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Appli
+cability</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>HNAP Metadata
+reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Su
+mmary</p></td>
+<td><p>A short
+summary of
+the service.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>Canadian
+airports served
+by NAV CANADA
+control towers
+or flight
+service
+station.</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>D
+escri
+ption</p></td>
+<td><p>A detailed
+description
+of the
+service.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>This field
+could be a
+complete copy
+(or a shorter
+version) of the
+“Description”
+already
+included in the
+FGP Catalogue</p></td>
+<td><p>Data
+Identification
+(MD_DataI
+dentification)
+5.3.1.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Tags</p></td>
+<td><p>Keywords or
+terms that
+describe the
+service,
+separated by
+commas.
+Keywords are
+a useful way
+to quickly
+and easily
+identify and
+find
+specific
+content with
+ArcGIS
+Online or
+other
+applications
+developed to
+use these
+keywords.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>Airports, Air
+transport,
+Geographic
+data, Aviation,
+Canada, Air
+Navigation</p></td>
+<td><p>Keywords
+(MD_Keywords)
+5.3.6.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>A
+ccess
+and
+Use
+c
+onstr
+aints</p></td>
+<td><p>Text
+describing
+the
+restrictions
+and legal
+p
+rerequisites
+for
+accessing
+and using
+the service.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p><a class="reference external" href="http://open">http://open</a>
+.canada.ca/en/o
+pen-government-
+licence-canada.</p></td>
+<td><p>Legal
+Constraints
+(MD_Leg
+alConstraints)
+acc
+essConstraints
+5.4.2.2,
+useConstraints
+5.4.2.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Cr
+edits</p></td>
+<td><p>Organization
+that has
+produced the
+data set,
+plus other
+o
+rganizations
+as
+necessary.
+This
+information
+is displayed
+in web
+applications
+as
+attribution
+on the
+bottom part
+of the map.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>Government of
+Canada; Natural
+Resources
+Canada; Earth
+Sciences
+Sector; Canada
+Centre for
+Mapping and
+Earth
+Observation :</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>The DDRConfigFile is divided in 3/3 main sections – Download Package</p></li>
+<li><p>This section refers to the files that will be downloadable from the
+DDR FTP site.</p></li>
+<li><p>If no download package publication is requested, this section must be
+left empty.</p></li>
+<li><p>The package name parameter must be filled. This will be the folder
+name on the ftp site.</p></li>
+<li><p>For each file you must give the:</p></li>
+<li><p>File name. (FGDB and shapefile must be zipped. File name must include
+the .zip extension)</p></li>
+<li><p>FTP Subfolder (optional)</p></li>
+</ul>
+</section>
+<section id="a-set-of-ancillary-files-for-download">
+<h3>A set of Ancillary files (for download)<a class="headerlink" href="#a-set-of-ancillary-files-for-download" title="Permalink to this heading"></a></h3>
+<p>The Download Package should contain:</p>
+<ul class="simple">
+<li><p><strong>Data Set</strong> in the selected format:</p></li>
+<li><p>Data Set formats offered as part of the Download Packages should
+include an Open Data format or a proprietary format if the adoption
+of the proprietary format is widespread. The spatial data formats
+proposed are:</p></li>
+<li><p>Esri File Geodatabase (FGDB);</p></li>
+<li><p>KML;</p></li>
+<li><p>GeoJSON;</p></li>
+<li><p>Shapefile;</p></li>
+<li><p>CSV (comma-separated values) or Text (tab-delimited) – suggested for
+point features only.</p></li>
+<li><p><strong>Document describing data content</strong>. Include at least on description
+attribute from the following list:</p></li>
+<li><p>List of attributes and description (doc, xls, txt, csv, pdf)</p></li>
+<li><p>Specification (doc, pdf)</p></li>
+<li><p>Catalogue (doc, xls, txt, csv, html, pdf)</p></li>
+<li><p>Data model (doc, xls, html, pdf)</p></li>
+<li><p>Complementary documents (doc, xls, txt, csv, pdf)</p></li>
+</ul>
+</section>
+</section>
+<section id="coordinate-system">
+<h2>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this heading"></a></h2>
+<p>FGP contributors are strongly encouraged to make their data available in
+one or more of the four projections presented here in order of
+preference:</p>
+<ol class="arabic simple">
+<li><p>NAD83 / Canada Atlas Lambert EPSG:3978 <a class="reference external" href="http://epsg.io/3978">&gt;</a>
+<a class="reference external" href="http://epsg.io/3978">http://epsg.io/3978</a></p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>WGS84 / Pseudo-Mercator EPSG:3857 <a class="reference external" href="http://epsg.io/3857">&gt;</a>
+<a class="reference external" href="http://epsg.io/3857">http://epsg.io/3857</a></p></li>
+<li><p>NAD83 (CSRS) / Canada Atlas Lambert EPSG:3979
+<a class="reference external" href="http://epsg.io/3979">&gt;</a> <a class="reference external" href="http://epsg.io/3979">http://epsg.io/3979</a></p></li>
+<li><p>NAD83 (CSRS) EPSG:4617 <a class="reference external" href="http://epsg.io/4617">&gt;</a>
+<a class="reference external" href="http://epsg.io/4617">http://epsg.io/4617</a></p></li>
+</ol>
+<p><strong>Note:</strong> The base maps used by the FGP viewer are in projections 1 and
+2 of the list above. Projection 1 is the default projection used in the
+FGP viewer. For performance reasons, it is preferable to use the same
+projection for the data than the FGP base map in order to avoid
+on–the-fly reprojection mechanism.</p>
+</section>
+<section id="fgp-naming-conventions">
+<h2>FGP Naming Conventions<a class="headerlink" href="#fgp-naming-conventions" title="Permalink to this heading"></a></h2>
+<p>Please follow the following naming conventions for your input package.</p>
+<section id="generic-naming-standards">
+<h3>Generic Naming Standards<a class="headerlink" href="#generic-naming-standards" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Begin title with the name or subject of the resource. The most-unique
+content of name or subject should come first.</p></li>
+<li><p>Names must start with a letter.</p></li>
+<li><p>Name strings should include only:</p></li>
+<li><p>Alphanumeric characters (letters and numbers)</p></li>
+<li><p>Use _ to separate words</p></li>
+<li><p>Name strings must not include:</p></li>
+<li><p>Spaces, periods, dashes, or any other special characters</p></li>
+<li><p>Name should not exceed 70 characters.</p></li>
+<li><p>If abbreviations are used, use standard abbreviations. If letters are
+to be removed to form an ad-hoc abbreviation, removal of vowels first
+is the preferred method. Abbreviations should not obscure the logical
+meaning of the name.</p></li>
+<li><p>Avoid the use of acronyms.</p></li>
+<li><p>Names should not include reference to the organization.</p></li>
+</ul>
+</section>
+</section>
+<section id="official-languages">
+<h2>Official Languages<a class="headerlink" href="#official-languages" title="Permalink to this heading"></a></h2>
+<p>According to <em>FGP Web Service Requirements</em> (link to reference sheet)
+web services must be made available in both official languages.
+Departments are encouraged to separate web services, one in English and
+one in French. Bilingual web services (one service, two languages) are
+also supported by the FGP catalogue and visualization application but
+separate services for each official language is the most desirable
+scenario for usability.</p>
+</section>
+<section id="appendix-a-naming-conventions">
+<h2>Appendix A: Naming conventions<a class="headerlink" href="#appendix-a-naming-conventions" title="Permalink to this heading"></a></h2>
+<section id="file-geodatabase-fgdb-naming-standard">
+<h3>File Geodatabase (FGDB) Naming Standard<a class="headerlink" href="#file-geodatabase-fgdb-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Generic standards apply (see Generic Naming Standards).</p></li>
+<li><p>Name should be lower case.</p></li>
+<li><p>The name should be formed using a concatenation of:</p></li>
+</ul>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Table 4: Field Name Components</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>App
+licability</p></th>
+<th class="head"><p>Component</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>D
+omain
+Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mandatory</p></td>
+<td><p>General
+Descriptor</p></td>
+<td><p>General subject
+descriptor</p></td>
+<td><p>User
+spec
+ified</p></td>
+<td><p>energy_i
+nfrastructure</p></td>
+</tr>
+<tr class="row-odd"><td><p>Optional</p></td>
+<td><p>Location
+Descriptor</p></td>
+<td><p>Location covered
+by the dataset</p></td>
+<td><p>User
+spec
+ified</p></td>
+<td><p>Quebec,
+Ottawa,
+B
+affin_Island,
+etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>Optional</p></td>
+<td><p>Scale/
+Resolution
+Descriptor</p></td>
+<td><p>Data capture
+scale,
+divided by 1000
+(=k), or
+1,000,000 (=M).</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>20k, 50k,
+250k, 2M,
+etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Optional</p></td>
+<td><p>Year</p></td>
+<td><p>Year, or year
+range
+of data capture</p></td>
+<td><p>Coded
+Value
+or
+range</p></td>
+<td><p>2003
+2001_2007</p></td>
+</tr>
+<tr class="row-even"><td><p>Optional</p></td>
+<td><p>Coordinate
+system</p></td>
+<td><p>EPSG code of the
+coordinate
+system</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>epsg3978</p>
+<p>epsg3957</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Optional</p></td>
+<td><p>Version</p></td>
+<td><p>Dataset version,
+if
+multiple
+versions are
+present</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>v1, v2, v3,
+etc</p></td>
+</tr>
+<tr class="row-even"><td><p>Optional*</p></td>
+<td><p>Language</p></td>
+<td><p>Data language</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>en, fr</p></td>
+</tr>
+<tr class="row-odd"><td><p>*When
+both
+official
+languages
+FGDB are
+provided
+in the
+input
+package,
+the FGDB
+names
+should be
+in English
+and with
+the
+language
+indicator,
+i.e. _en
+or _fr.
+This
+reco
+mmendation
+makes it
+easier for
+FGDB
+man
+ipulation,
+storage
+and
+r
+eadability
+by
+bilingual
+ap
+plications</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>.<strong>Note:</strong> Use optional components only when relevant and useful.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>energy_infrastructure_ontario_250k_2016.gdb</p></li>
+<li><p>watershed_quebec_250k_2015_en.gdb</p></li>
+<li><p>watershed_quebec_250k_2015_fr.gdb</p></li>
+<li><p>community_pasture_50k_2002_2011_en.gdb</p></li>
+<li><p>community_pasture_50k_2002_2011_fr.gdb</p></li>
+</ul>
+</section>
+<section id="files-geodatabase-fgdb-feature-class-naming-standard">
+<h3>Files Geodatabase (FGDB); Feature Class Naming Standard<a class="headerlink" href="#files-geodatabase-fgdb-feature-class-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Generic standards apply (see Generic Naming Standards).</p></li>
+<li><p>Must be limited to 160 characters. However, keep in mind that a 32
+characters limit exists for data published to ArcSDE, and shorter
+names are generally easier to work with.</p></li>
+<li><p>Names should be lower case.</p></li>
+<li><p>Feature Class names should be in the official language of the FGDB.</p></li>
+<li><p>The name should be formed using a concatenation of:</p></li>
+</ul>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Table 5: Field Name Alias</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Applica
+bility*</p></th>
+<th class="head"><p>Domain
+Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Subject
+Descriptor</p></td>
+<td><p>Feature Class
+subject
+descriptor</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>User
+s
+pecified</p></td>
+<td><p>censu
+s_consilidated</p></td>
+</tr>
+<tr class="row-odd"><td><p>Type</p>
+<p>Descriptor</p>
+</td>
+<td><p>A more specific
+type
+description.</p></td>
+<td><p>M
+andatory</p></td>
+<td><p>User
+s
+pecified</p></td>
+<td><p>subdivisions</p></td>
+</tr>
+<tr class="row-even"><td><p>Scale/
+Resolution
+Descriptor</p></td>
+<td><p>Data capture
+scale,
+divided by 1000
+(=k),
+or 1,000,000
+(=M).</p></td>
+<td><p>Optional</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>20k, 50k,
+250k, 2M,</p></td>
+</tr>
+<tr class="row-odd"><td><p>Year</p></td>
+<td><p>Year, or year
+range
+of data capture</p></td>
+<td><p>Optional</p></td>
+<td><p>Coded
+Value or
+range</p></td>
+<td><p>2003
+2001_2007</p></td>
+</tr>
+<tr class="row-even"><td><p>Feature
+Type</p></td>
+<td><p>Feature
+geometry
+type.</p></td>
+<td><p>Optional</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p><em>English</em></p>
+<div class="line-block">
+<div class="line">polygon,
+line,</div>
+<div class="line">point, anno,
+ras</div>
+</div>
+<p><em>French</em></p>
+<div class="line-block">
+<div class="line">polygone,
+ligne,</div>
+<div class="line">point, anno,
+ras</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>Dataset
+version, if
+multiple
+versions are
+present</p></td>
+<td><p>Op
+tional*</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>v1, v2, v3,
+etc</p></td>
+</tr>
+</tbody>
+</table>
+<p>* The use of the Version optional component should not be used for the
+feature class name if already used for the FGDB name.</p>
+<p>Note: Use optional components only when relevant and useful.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>fueltank_location_20k_2006_point_v1</p></li>
+<li><p>inventaire_grands_projets_Canada_v1</p></li>
+<li><p>census_consilidated_division_2012</p></li>
+<li><p>landcover_classification_30M</p></li>
+</ul>
+</section>
+<section id="files-geodatabase-fgdb-field-naming-standard">
+<h3>Files Geodatabase (FGDB); Field Naming Standard<a class="headerlink" href="#files-geodatabase-fgdb-field-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Generic standards apply (see Generic Naming Standards)</p></li>
+<li><p>Field Names should be descriptive of the field content</p></li>
+<li><p>The use of lower case should be preferred</p></li>
+<li><p>The use of only one case type is preferred (only uppercase or only
+lower case)</p></li>
+<li><p>Each field names must be unique</p></li>
+<li><p>The Field name should be in English and the same for all official
+languages FGDB versions (the field names alias should be use for the
+translation in each FGDB (See the section “Files Geodatabase (FGDB);
+Field alias Naming Standard”).</p></li>
+<li><p>Field names should contain standard abbreviations to keep the field
+name as short as possible. Abbreviations should not obscure the
+logical meaning of the field name.</p></li>
+<li><p>Where both official languages are present in the same entity, the
+field name must end with the language indicator, i.e. _en or _fr
+(ex. ecozone_name_fr, ecozone_name_en).</p></li>
+<li><p>Keep in mind that if the datasets is converted into shape file, field
+length is limited to 10.</p></li>
+</ul>
+<p>Field naming convention example</p>
+<p>The following are example of possible field name components:</p>
+<ul class="simple">
+<li><p>The field name could be composed of the following components:</p></li>
+</ul>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Table 6: Name Concatenation</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>C
+omponent</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Applicability</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Prime
+word</p></td>
+<td><p>A prime word establishes
+the subject type of the
+data item being named.</p></td>
+<td><p>Mandatory</p></td>
+<td><p>Cover, Use,
+Geo, Station,
+System</p></td>
+</tr>
+<tr class="row-odd"><td><p>Qu
+alifying
+word</p></td>
+<td><p>A qualifying word
+categorizes the data
+item within its subject
+type.</p></td>
+<td><p>Optional</p></td>
+<td><p>Land, Y, Major</p></td>
+</tr>
+<tr class="row-even"><td><p>Class
+word</p></td>
+<td><p>A class word identifies
+the nature of the data
+item being defined.</p></td>
+<td><p>Optional
+(very
+recommended)</p></td>
+<td><p>Code, Number,
+Name, Coord</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Prime words are not mandatory as part of a physical name where the
+prime word is the same as the table name.</p></li>
+<li><p>Qualifying words may be omitted if the uniqueness and completeness of
+data is retained.</p></li>
+<li><p>For ease of readability, any meaningful permutation (or ordering) of
+the prime/qualifying/class words is permitted, to remain close to the
+logical name.</p></li>
+<li><p>Abbreviated class words should be used if they exist (e.g. IND, NUM,
+DESC, CMNT)</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>land_cover_code</p></li>
+<li><p>land_use_code</p></li>
+<li><p>major_system_name</p></li>
+<li><p>y_geo_coord</p></li>
+<li><p>road_number</p></li>
+<li><p>road_name</p></li>
+<li><p>city_name</p></li>
+<li><p>city_id</p></li>
+<li><p>number_of_lane</p></li>
+</ul>
+</section>
+<section id="files-geodatabase-fgdb-field-alias-naming-standard">
+<h3>Files Geodatabase (FGDB); Field alias Naming Standard<a class="headerlink" href="#files-geodatabase-fgdb-field-alias-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The use of blank and special characters is permitted.</p></li>
+<li><p>Both upper and lower cases are permitted.</p></li>
+<li><p>Field Names alias should be descriptive of the field content.</p></li>
+<li><p>Field names alias must start with a letter.</p></li>
+<li><p>All field names alias must be unique.</p></li>
+<li><p>Field names alias must be in the official language of the FGDB.</p></li>
+<li><p>Field names alias should be evocative.</p></li>
+<li><p>Field names alias should not contain abbreviations, if possible.</p></li>
+</ul>
+<p>The following are the details on the field name alias components:</p>
+<ul class="simple">
+<li><p>Prime words are not mandatory as part of a physical name where the
+prime word is the same as the table name.</p></li>
+<li><p>Qualifying words may be omitted if the uniqueness and completeness of
+data is retained.</p></li>
+<li><p>For ease of readability, any meaningful permutation (or ordering) of
+the prime, qualifying, class, or any words is permitted, to remain
+close to the logical name.</p></li>
+<li><p>Abbreviated class words should be used if they exist (for example,
+IND, NUM, DESC, CMNT).</p></li>
+<li><p>The field name alias should be composed of the following components.
+Table 5 defines the field name aliases.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Co
+mponent</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>App
+licability</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Prime
+word</p></td>
+<td><p>A prime word establishes
+the subject type of the
+data item being named.</p></td>
+<td><p>Mandatory</p></td>
+<td><p>Cover, Use, Geo,
+Station, System</p></td>
+</tr>
+<tr class="row-odd"><td><p>Qua
+lifying
+word</p></td>
+<td><p>A qualifying word
+categorizes the data item
+within its subject type.</p></td>
+<td><p>Optional</p></td>
+<td><p>Land, Y, Major</p></td>
+</tr>
+<tr class="row-even"><td><p>Class
+word</p></td>
+<td><p>A class word identifies
+the nature of the data
+item being defined.</p></td>
+<td><p>Mandatory</p></td>
+<td><p>Code, Number,
+Name, Coord, Id,
+Descriptor,
+Priority</p></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>Geographic Coordinates Y (latitude)</p></li>
+<li><p>City Identifier</p></li>
+<li><p>Identifiant de la ville</p></li>
+<li><p>Number of lane</p></li>
+<li><p>Nombre de voie</p></li>
+</ul>
+</section>
+<section id="mxd-file-naming-standard">
+<h3>MXD File Naming Standard<a class="headerlink" href="#mxd-file-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The MXD File naming convention follow the same rules describe for the
+FGDB naming convention (see File Geodatabase (FGDB) Naming Standard
+section).</p></li>
+</ul>
+</section>
+<section id="map-service-naming-standard">
+<h3>Map Service Naming Standard<a class="headerlink" href="#map-service-naming-standard" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Should be the same as the FGDB and the MXD names used to generate the
+Map Service (See File Geodatabase (FGDB) Naming Standard section).
+Only one FGDB per Map Service is permitted.</p></li>
+</ul>
+</section>
+<section id="map-service-layers-naming-standard-in-the-mxd">
+<h3>Map Service; Layers Naming Standard (in the mxd)<a class="headerlink" href="#map-service-layers-naming-standard-in-the-mxd" title="Permalink to this heading"></a></h3>
+<p>By default, ArcMap use the Feature Class name to set the layer name. The
+user can modify the layer name in the table of content of the mxd.</p>
+<ul class="simple">
+<li><p>The use of blank and special characters is permitted.</p></li>
+<li><p>Both upper case and lower case are permitted.</p></li>
+<li><p>For English services, title capitalization rules must be applied:</p></li>
+<li><p>Always capitalize the first and the last word.</p></li>
+<li><p>Capitalize all nouns, pronouns, adjectives, verbs, adverbs, and
+subordinate conjunctions (“as”, “because”, “although”).</p></li>
+<li><p>Lowercase all articles, coordinate conjunctions (“and”, “or”, “nor”),
+and prepositions regardless of length, when they are other than the
+first or last word. (Note: NIVA prefers to capitalize prepositions of
+five characters or more (“after”, “among”, “between”).)</p></li>
+<li><p>Lowercase the “to” in an infinitive.</p></li>
+<li><p>All layer names must be unique.</p></li>
+<li><p>Layer names must be in the official language of the service.</p></li>
+<li><p>Layer names should be evocative.</p></li>
+<li><p>Layer names should not contain abbreviations, if possible.</p></li>
+<li><p>The name should be formed using a concatenation as described in Table
+6.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Applic
+ability</p></th>
+<th class="head"><p>Domain
+Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Subject
+Descriptor</p></td>
+<td><p>Layer subject
+descriptor</p></td>
+<td><p>Ma
+ndatory</p></td>
+<td><p>User
+s
+pecified</p></td>
+<td><p>Fuel Tank
+L
+ocalisation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spatial
+Extend</p></td>
+<td><p>Layer spatial
+extend</p></td>
+<td><p>O
+ptional</p></td>
+<td><p>User
+s
+pecified</p></td>
+<td><p>Canada</p>
+<p>Québec</p>
+<p>Québec</p>
+<p>Alberta</p>
+<p>etc.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Scale/
+Resolution
+Descriptor</p></td>
+<td><p>Layer display
+scale,
+divided by 1000
+(=k), or 1,000,000
+(=m)</p></td>
+<td><p>O
+ptional</p></td>
+<td><p>Coded
+Value or
+range</p>
+<p>min
+value=
+1k max
+va
+lue=100m</p>
+</td>
+<td><div class="line-block">
+<div class="line">20k, 50k,</div>
+<div class="line">250k, 2m,</div>
+</div>
+<p>1k-2m,</p>
+<p>2m-30m</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Year</p></td>
+<td><p>Year, or year range
+of data capture or
+prediction</p></td>
+<td><p>O
+ptional</p></td>
+<td><p>Coded
+Value or
+range</p></td>
+<td><div class="line-block">
+<div class="line">2003,</div>
+<div class="line">2001 to
+2007,</div>
+</div>
+<p>2001 à 2007</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Feature
+Type</p></td>
+<td><p>Feature geometry
+type.</p></td>
+<td><p>O
+ptional</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p><em>English</em></p>
+<div class="line-block">
+<div class="line">polygon,
+line,</div>
+<div class="line">point,</div>
+</div>
+<dl class="simple">
+<dt>annotation,</dt><dd><p>raster</p>
+</dd>
+</dl>
+<p><em>French</em></p>
+<div class="line-block">
+<div class="line">polygone,
+ligne,</div>
+<div class="line">point,</div>
+</div>
+<dl class="simple">
+<dt>annotation,</dt><dd><p>matriciel</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>Dataset version, if
+multiple versions
+are present</p></td>
+<td><p>O
+ptional</p></td>
+<td><p>Coded
+Value</p></td>
+<td><p>v1, v2, v3,
+etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Note:</strong>
+Use
+optional
+components
+only when
+relevant
+and
+useful.</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>All the optional name components must be in a unique pair of brackets
+where each component is separated by a comma.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>Fuel Tanks [Canada, 20k-2m, 2006, line, v1]</p></li>
+<li><p>Réservoirs d’essence [Canada, 20k-2m, 2006, ligne, v1]</p></li>
+<li><p>Inventaire des grands projets [Canada, 2015]</p></li>
+<li><p>Inventaire des grands projets [Canada, 2015]</p></li>
+<li><p>Land Cover, Classification [30m]</p></li>
+<li><p>Couverture du sol, classification [30m]</p></li>
+<li><p>Indice de bien-être des collectivités (IBC) [Québec, 1k-1m, 2012,
+polygone]</p></li>
+<li><p>Community Well-Being (CWB) Index [Quebec, 1k-1m, 2012, polygon]</p></li>
+<li><p>Airports</p></li>
+<li><p>Aéroports</p></li>
+</ul>
+</section>
+<section id="map-service-field-naming-standard-in-the-mxd">
+<h3>Map Service; Field Naming Standard (in the mxd)<a class="headerlink" href="#map-service-field-naming-standard-in-the-mxd" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Should be the same as the corresponding FGDB Field alias (see Files
+Geodatabase (FGDB); Field alias Naming Standard section).</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Natural resources Canada, Her Majesty the King in right of Canada.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

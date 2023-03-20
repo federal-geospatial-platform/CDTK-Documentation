@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Submitting data to the DDR &mdash; Documentation CDTK Documentation 0.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/cdtk.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="4. Using the results" href="use.html" />
+    <link rel="prev" title="2. Preparing the data" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CDTK Documentation
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. System overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">2. Preparing the data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Submitting data to the DDR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-a-publication-method">3.1. Choosing a publication method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-qgis-plugin">3.2. Using the QGIS Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-installation">3.2.1. Plugin installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-login">3.2.2. Plugin login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publish">3.2.3. Publish</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unpublish">3.2.4. Unpublish</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update">3.2.5. Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validate">3.2.3. Validate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-directory-watcher">3.3. Using the directory watcher</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-control-file">3.3.1. Creating a control file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-data">3.3.2. Preparing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-packaging">3.3.3. File packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending-the-package-for-processing">3.3.4. Sending the package for processing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#system-messaging">3.4. System messaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use.html">4. Using the results</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CDTK Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3. Submitting data to the DDR</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/submit.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="submitting-data-to-the-ddr">
+<span id="submit-ref"></span><h1>3. Submitting data to the DDR<a class="headerlink" href="#submitting-data-to-the-ddr" title="Lien permanent vers cette rubrique"></a></h1>
+<section id="choosing-a-publication-method">
+<span id="publication-method-ref"></span><h2>3.1. Choosing a publication method<a class="headerlink" href="#choosing-a-publication-method" title="Lien permanent vers cette rubrique"></a></h2>
+<p>The DDR has 2 publication mecanisms avaiblable to its users. Each mecanism have its pros and cons, it’s up to the user to choose the one who better suits the operational needs. The user can switch from a publication method to another at any time.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Pros</p></th>
+<th class="head"><p>Cons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>QGIS Plugin</p></td>
+<td><ul class="simple">
+<li><p>Any vector format supported</p></li>
+<li><p>No data packaging needed</p></li>
+<li><p>Easy user interface</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Publication parameters have to be entered each time</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Directory watcher</p></td>
+<td><ul class="simple">
+<li><p>Easy scripting</p></li>
+<li><p>Publication parameters entered only once in a control file</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Only vector format supported is GPKG</p></li>
+<li><p>No graphic interface</p></li>
+<li><p>Data needs to be packaged properly</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="using-the-qgis-plugin">
+<span id="qgis-plugin-ref"></span><h2>3.2. Using the QGIS Plugin<a class="headerlink" href="#using-the-qgis-plugin" title="Lien permanent vers cette rubrique"></a></h2>
+<p>The simpliest way to publish a web service with the DDR in to use the QGIS plugin. The plugin only works on the Government of Canada Network, make sure you are on a government network or connected trough a VPN.</p>
+<section id="plugin-installation">
+<h3>3.2.1. Plugin installation<a class="headerlink" href="#plugin-installation" title="Lien permanent vers cette rubrique"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>To install the plugin, open QGIS and go to « Plugins -&gt; Manage and Install Plugins ».</p></li>
+</ol>
+<img alt="_images/qgis_plugins.png" src="_images/qgis_plugins.png" />
+<ol class="arabic simple" start="2">
+<li><p>In the « Settings » tab, click on « Add… » and input a name (like « GeoDiscovery « ) and the URL of the repository: <a class="reference external" href="https://federal-geospatial-platform.github.io/Plugin_Repository/plugins.xml">https://federal-geospatial-platform.github.io/Plugin_Repository/plugins.xml</a></p></li>
+</ol>
+<img alt="_images/qgis_add_repo.png" src="_images/qgis_add_repo.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the « Not installed » tab, select the plugin called « DDR Processing » and click on « Install Plugin ».</p></li>
+</ol>
+<img alt="_images/qgis_install.png" src="_images/qgis_install.png" />
+</div></blockquote>
+</section>
+<section id="plugin-login">
+<h3>3.2.2. Plugin login<a class="headerlink" href="#plugin-login" title="Lien permanent vers cette rubrique"></a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>To use the plugin, head to the QGIS Processing Toolbox (« Processing -&gt; Processing Toolbox »).</p></li>
+</ol>
+<img alt="_images/qgis_toolbox.png" src="_images/qgis_toolbox.png" />
+<ol class="arabic simple" start="2">
+<li><p>In the « DDR Publication » tool, expand « Authentication (first step) » and double-click on « DDR Login ».</p></li>
+</ol>
+<img alt="_images/ddr_login.png" src="_images/ddr_login.png" />
+<ol class="arabic simple" start="3">
+<li><p>The first time the plugin is used, click on the + sign to add new credentials.</p></li>
+</ol>
+<img alt="_images/add_creds.png" src="_images/add_creds.png" />
+<ol class="arabic simple" start="4">
+<li><p>Enter a connection name and input the GeoAD credentials provided by our support team (<a class="reference internal" href="index.html#help"><span class="std std-ref">Help resources</span></a>).</p></li>
+</ol>
+<img alt="_images/authentication.png" src="_images/authentication.png" />
+<ol class="arabic simple" start="5">
+<li><p>Now, with the new connection selected, hit the Run button to connect to the DDR.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="publish">
+<span id="qgis-plugin-publish"></span><h3>3.2.3. Publish<a class="headerlink" href="#publish" title="Lien permanent vers cette rubrique"></a></h3>
+<p>The first time a dataset is published to the DDR, the user needs to perform a « DDR Publish ». In the « DDR Publication » tool, select « Publish Project File » and input the following parameters. To make sure the package is correctly built, it is possible to perform a validation before publishing (see <a class="reference internal" href="#ddr-validate"><span class="std std-ref">3.2.3. Validate</span></a>).</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the English project file (.qgs only).</p></li>
+<li><p>Select the French project file (.qgs only).</p></li>
+<li><p>Select a department from the list of department for which you are authorized to publish.</p></li>
+<li><p>Enter the medata ID of the record in the FGP catalogue.</p></li>
+<li><p>If you want your layers to be available as a Clip-Zip-Ship collection, select a theme [optional].</p></li>
+<li><p>Select the server for the download package when applicable.</p></li>
+<li><p>Select the QGIS server for the web services.</p></li>
+<li><p>In the advanced parameters, a different email for the reception of the publication report can be inputed.</p></li>
+<li><p>In the advanced parameters, the user can choose to keep the temporary package used to publish.</p></li>
+</ol>
+<img alt="_images/publish.png" src="_images/publish.png" />
+</div></blockquote>
+</section>
+<section id="unpublish">
+<h3>3.2.4. Unpublish<a class="headerlink" href="#unpublish" title="Lien permanent vers cette rubrique"></a></h3>
+<p>To remove a dataset from the DDR, select « Unpublish Project File » from the « DDR Publication » tool. Any corresponding collection published in the Clip-Zip-Ship will be automatically deleted by this process.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the English project file (.qgs only).</p></li>
+<li><p>Select the French project file (.qgs only).</p></li>
+<li><p>Select the department in which the dataset is published.</p></li>
+<li><p>Select the server on which the downloadable files are published.</p></li>
+<li><p>Select the QGIS server on which the web services are published.</p></li>
+<li><p>In the advanced parameters, a different email for the reception of the unpublication report can be inputed.</p></li>
+<li><p>In the advanced parameters, the user can choose to keep the temporary package used to unpublish.</p></li>
+</ol>
+<img alt="_images/unpublish.png" src="_images/unpublish.png" />
+</div></blockquote>
+</section>
+<section id="update">
+<h3>3.2.5. Update<a class="headerlink" href="#update" title="Lien permanent vers cette rubrique"></a></h3>
+<p>The update (republish) works exactly like the publish, but it allows the user to update an existing dataset. The parameters are the same than <a class="reference internal" href="#qgis-plugin-publish"><span class="std std-ref">3.2.3. Publish</span></a>.</p>
+</section>
+<section id="validate">
+<span id="ddr-validate"></span><h3>3.2.3. Validate<a class="headerlink" href="#validate" title="Lien permanent vers cette rubrique"></a></h3>
+<p>Before sending their data to Publication, Update or Unpublication, the users can validate the content of a QGIS project file (.qgs) and its control file by using Validate. Select what process you want to validate your data for and look at the results in the Log tab.</p>
+<blockquote>
+<div><img alt="_images/validate.png" src="_images/validate.png" />
+</div></blockquote>
+</section>
+</section>
+<section id="using-the-directory-watcher">
+<span id="directory-watcher-ref"></span><h2>3.3. Using the directory watcher<a class="headerlink" href="#using-the-directory-watcher" title="Lien permanent vers cette rubrique"></a></h2>
+<p>The directory watcher is an alternative publication method that consists in dropping a zipped package on a sFTP server. It can be useful for projects that require frequent updates. File creation and transmission can also be scripted from end-to-end. It is also the prefered method when dealing with large datasets.</p>
+<p>Files needed for a publication or update using the directory watcher:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Control file</p></li>
+<li><p>English QGS file</p></li>
+<li><p>French QGS file</p></li>
+<li><p>Geopackage(s) containing the data</p></li>
+<li><p>Zipped download folder [optional]</p></li>
+</ul>
+</div></blockquote>
+<section id="creating-a-control-file">
+<h3>3.3.1. Creating a control file<a class="headerlink" href="#creating-a-control-file" title="Lien permanent vers cette rubrique"></a></h3>
+<p>Instead of using a user interface, the user must set up a control file to record their instructions. <a class="reference external" href="https://ftp.maps.canada.ca/pub/ddr_rdd/CDTK/templates_gabarits/ControlFile.xlsx">Download the template</a> and fill the required information.</p>
+<p><strong>Generic parameters tab:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Email: The user email address (must be a registered user address).</p></li>
+<li><p>Department: The official English department acronym (user must be authorized to publish for this department).</p></li>
+<li><p>Metadata Record Identifier: The UUID of the related FGP metadata record.</p></li>
+<li><p>CZS Collection Thematic [optional]: To register the collections in the Clip-Zip-Ship, select a theme.</p></li>
+<li><p>QGIS Server ID [optional]: Leave this parameter empty for the moment.</p></li>
+<li><p>Download repository ID [optional]: Leave this parameter empty for the moment.</p></li>
+<li><p>Download folder name [optional]: The name of the folder inside the ZIP file containing the downloadable data.</p></li>
+<li><p>Core Subject Term [optional]: To publish files to the FTP server, select a core subject term.</p></li>
+</ul>
+<img alt="_images/generic_parameters.png" src="_images/generic_parameters.png" />
+</div></blockquote>
+<p><strong>Service parameters tab:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Service Language: Leave as is.</p></li>
+<li><p>Project Filename: Name of the QGIS project files.</p></li>
+<li><p>Service Name: Filed automaticaly based on the project filename.</p></li>
+<li><p>Service Folder Name: Filled automatically based on the department specified in the other tab.</p></li>
+</ul>
+<img alt="_images/service_parameters.png" src="_images/service_parameters.png" />
+</div></blockquote>
+</section>
+<section id="preparing-data">
+<h3>3.3.2. Preparing data<a class="headerlink" href="#preparing-data" title="Lien permanent vers cette rubrique"></a></h3>
+</section>
+<section id="file-packaging">
+<h3>3.3.3. File packaging<a class="headerlink" href="#file-packaging" title="Lien permanent vers cette rubrique"></a></h3>
+</section>
+<section id="sending-the-package-for-processing">
+<h3>3.3.4. Sending the package for processing<a class="headerlink" href="#sending-the-package-for-processing" title="Lien permanent vers cette rubrique"></a></h3>
+<p><a class="reference internal" href="index.html#help"><span class="std std-ref">Help resources</span></a></p>
+</section>
+</section>
+<section id="system-messaging">
+<h2>3.4. System messaging<a class="headerlink" href="#system-messaging" title="Lien permanent vers cette rubrique"></a></h2>
+<p>À remplir</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="data.html" class="btn btn-neutral float-left" title="2. Preparing the data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="use.html" class="btn btn-neutral float-right" title="4. Using the results" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Natural resources Canada, Her Majesty the King in right of Canada.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
