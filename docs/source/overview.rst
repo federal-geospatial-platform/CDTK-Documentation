@@ -1,5 +1,3 @@
-.. _system-overview-ref:
-
 1. CDTK System overview
 ==================
 
@@ -53,7 +51,7 @@ SFTP QGIS Upload Directory and FME Directory Watcher
 
 This SFTP is a virtual directory linked to an AWS S3 bucket. A directory watcher Notification on FME Server is set to ping
 the S3 bucket every minute. If anything new has been uploaded by a user
-(see how in this section) to the bucket, the DDR_Directory_Watcher
+(:ref:`see how in this section<QGIS Desktop Plugin>`) to the bucket, the DDR_Directory_Watcher
 (.fmw) FME workspace is triggered. The workspace receives and parses the
 notification’s message (JSON) containing the information needed to call
 the DDR QGIS Publication API.
