@@ -1,5 +1,5 @@
 1. CDTK System overview
-==================
+=======================
 
 The CDTK (CCMEO Dissemination Tool Kit) is a flexible and portable geospatial data dissemination solution that combines two web-based applications:
 
@@ -22,12 +22,13 @@ The CDTK Architecture
    :width: 6.5in
    :height: 4.2875in
    
+
 .. image:: media/cdtk_architecture_legend.png
-   :width: 6.5in
-   :height: 4.2875in
+   :width: 2.0in
+   :height: 1.0in
 
 1.1. DDR
-----------------------
+--------
 
 The DDR application allows to Publish, Update and Delete OGC WMS to
 be served by QGIS Server. All its components are deployed in the FGP
@@ -57,7 +58,7 @@ notification’s message (JSON) containing the information needed to call
 the DDR QGIS Publication API.
 
 QGIS Desktop Plugin
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 A WMS service development and deployment environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -136,29 +137,8 @@ Input from Directory Watcher
 Input from QGIS Desktop Publication Plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.2. Infrastructure tiers
--------------------------
+1.2. Clip Zip and Ship (CZS)
+----------------------------
 
 À remplir
 
-1.2.1. Client tier
-~~~~~~~~~~~~~~~~~~
-
-À remplir
-
-1.2.1. Logic tier
-~~~~~~~~~~~~~~~~~
-
-À remplir
-
-1.2.1. Data tier
-~~~~~~~~~~~~~~~~
-
-À remplir
-
-.. _czs-ref:
-
-1.3. Clip-Zip-Ship
-------------------
-
-À remplir
