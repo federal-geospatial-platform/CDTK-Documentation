@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'rst2pdf.pdfbuilder',
 ]
 
 intersphinx_mapping = {
@@ -24,6 +25,11 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 intersphinx_disabled_domains = ['std']
+
+
+pdf_documents = [
+    ('index', 'CDTK_Documentation', 'CDTK Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
+]
 
 templates_path = ['_templates']
 locale_dirs = ['locale']
@@ -34,6 +40,13 @@ gettext_compact = False
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static'] 
 master_doc = 'index'
+
+html_show_sphinx = False
+
+
+#html_additional_pages = {
+#    'download': 'CDTK_Documentation.pdf',
+#}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
