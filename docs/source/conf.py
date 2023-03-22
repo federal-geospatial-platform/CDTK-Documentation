@@ -45,7 +45,7 @@ html_show_sphinx = False
 
 
 html_additional_pages = {
-    'download': 'download.html',
+    'download': 'download.rst',
 }
 
 # -- Options for EPUB output
