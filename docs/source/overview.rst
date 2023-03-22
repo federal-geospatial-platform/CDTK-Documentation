@@ -24,8 +24,13 @@ The CDTK Architecture
    
 
 .. image:: media/cdtk_architecture_legend.png
+<<<<<<< HEAD
+   :width: 2.0in
+   :height: 1.0in
+=======
    :width: 2.0in
    :height: 0.8in
+>>>>>>> 5980d33dd13c8ef548a8499d1f3ab9145c21575b
 
 1.1. DDR
 --------
@@ -83,7 +88,7 @@ WMS services published via the DDR.
 The DDR Registry Database Tables
 
 .. image:: media/ddr_registry_table_list.png
-   :width: 6.5in
+   :width: 3.5in
    :height: 4.2875in
 
 API
