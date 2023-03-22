@@ -44,9 +44,9 @@ master_doc = 'index'
 html_show_sphinx = False
 
 
-#html_additional_pages = {
-#    'download': 'CDTK_Documentation.pdf',
-#}
+html_additional_pages = {
+    'download': 'download.html',
+}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
