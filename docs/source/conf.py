@@ -45,7 +45,7 @@ html_show_sphinx = False
 
 
 html_additional_pages = {
-    'download': 'download.rst',
+    'download': 'https://github.com/federal-geospatial-platform/CDTK-documentation/raw/gh-pages/CDTK_Documentation.pdf',
 }
 
 # -- Options for EPUB output
