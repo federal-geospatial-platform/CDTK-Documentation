@@ -6,6 +6,8 @@
 
 The user of the CDTK can use the Data Dissemination Repository (DDR) to publish web services, downloadable files and Clip-Zip-Ship collections. The DDR support most GIS data formats, but there is some minimum settings required to make the publication workflow work.
 
+.. _vector-data-ref:
+
 2.1.1. Vector data
 ~~~~~~~~~~~~~~~~~~
 
@@ -21,6 +23,9 @@ All vector data is stored in a PostGIS database on the DDR servers. The input da
 ~~~~~~~~~~~~~~~~~~
 
 Any type of raster data is supported be the DDR. The data has to by stored on a web server accessible to the DDR. If the web services created are accessible publicly, the raster needs to be hosted on a public server as well. The data is not copied to the DDR servers, it remains in its original location and the web service produced calls and displays the data from its source. If the data source is not available, then the raster layer in the web service will fail to load.
+
+
+.. _qgis-project-ref:
 
 2.2. QGIS Project
 -----------------

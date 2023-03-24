@@ -182,11 +182,21 @@ Instead of using a user interface, the user must set up a control file to record
 3.3.2. Preparing data
 ~~~~~~~~~~~~~~~~~~~~~
 
+To create a complete input package, the following files must be included:
 
+	* An English QGIS project file (see :ref:`qgis-project-ref`).
+	* A French QGIS project file  (see :ref:`qgis-project-ref`).
+	* A single Geopackage (GPKG) containing all the vector data (see :ref:`vector-data-ref`).
+	* A control file named "ControlFile.xslx".
+	* A zipped download folder [optional]
 
 
 3.3.3. File packaging
 ~~~~~~~~~~~~~~~~~~~~~
+
+The files mentioned above must be present at the root of the ZIP file (not in a subfolder). The optional download folder must be named like in the "Download folder name (ftp root folder name)" parameter of the ControlFile and then zipped.
+
+	.. image:: media/packaging.png
 
 3.3.4. Sending the package for processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

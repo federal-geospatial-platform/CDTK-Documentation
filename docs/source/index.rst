@@ -37,6 +37,13 @@ the CCMEO users. Please reach us
 at `geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte@nrcan-rncan.gc.ca <mailto:geodiscoverydatadissemination-diffusiondesdonneesgeodecouverte%40nrcan-rncan.gc.ca>`__ for
 support.
 
+Download a PDF version of the documentation
+-------------------------------------------
+
+To download the latest PDF version of this documentation, `click here`_.
+
+.. _click here: https://github.com/federal-geospatial-platform/CDTK-documentation/raw/gh-pages/CDTK_Documentation.pdf
+
 Contents
 --------
 
