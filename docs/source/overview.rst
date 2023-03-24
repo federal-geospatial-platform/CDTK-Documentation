@@ -19,13 +19,13 @@ The CDTK is based on Open Source technologies (QGIS, PostgreSQL,  PyGeoAPI, etc.
 The CDTK Architecture
 
 .. image:: media/cdtk_architecture_tiers.png
-   :width: 6.0in
+   :width: 6.5in
    :height: 4.2875in
    
 
 .. image:: media/cdtk_architecture_legend.png
    :width: 2.0in
-   :height: 0.8in
+   :height: 1.0in
 
 1.1. DDR
 --------
@@ -42,7 +42,7 @@ The DDR Workflow
 
 .. image:: media/ddr_architecture_diagram.png
    :width: 6.5in
-   :height: 2.2875in
+   :height: 4.2875in
 
 Components
 ----------
@@ -84,7 +84,7 @@ The DDR Registry Database Tables
 
 .. image:: media/ddr_registry_table_list.png
    :width: 6.5in
-   :height: 4.2875in
+   :height: 2.2875in
 
 API
 ^^^
