@@ -189,6 +189,8 @@ To create a complete input package, the following files must be included:
 	* A single Geopackage (GPKG) containing all the vector data (see :ref:`vector-data-ref`).
 	* A control file named "ControlFile.xslx".
 	* A zipped download folder [optional]
+	
+``Note: If the package is meant to publish/update only the downloads folder, clear the cells in the "Service parameters" tab of the Control file.``
 
 
 3.3.3. File packaging
@@ -201,9 +203,32 @@ The files mentioned above must be present at the root of the ZIP file (not in a 
 3.3.4. Sending the package for processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`help`
+To drop an input package into the DDR, the user must have a GeoAD account and be a registered DDR user (see :ref:`help`). With your credentials in hand, use a FTP client like `FileZilla`_ to connect to the sFTP server.
+
+	* Protocol: SFTP - SSH File Transfer Protocol.
+	* Host:
+	
+		* Production: ftp-update.services.geo.ca
+		* Staging: ftp-update-stage.services.geo.ca
+		
+	* User: Provided by the support, usually firstname-lastname.
+	* Password: Provided by the support.
+	
+
+	.. image:: media/filezilla.png
+	
+Once connected, go in the "DDR_Directory_Watcher_Folder" folder and select your department's subfolder. Drop the package in the desired opeation subfolder.
+
+	* DDR_Publish: Publishes web services and/or  for the first time.
+	* DDR_Unpublish: Deletes a service and the Clip-Zip-Ship collections if any.
+	* DDR_Updates: Updates an existing service (and Clip-Zip-Ship collections if any) and/or an existing download package.
+	* DDR_Conditioning: Starts a conditioning process (must be put in place with the support, see :ref:`help`).
+
+	.. image:: media/dw.png
+
+	.. _FileZilla: https://filezilla-project.org/download.php
 
 3.4. System messaging
 ---------------------
 
-À remplir
+When the package processing is done, the DDR sends an email with the outcome of the operations (success or failure). If you don't receive the email, make sure to withelist the address ddr.fgpservices-servicespgf.rdd@aws.nrcan-rncan.cloud. If you still don't receive an email, contact the support: :ref:`help`.

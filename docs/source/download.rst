@@ -1,3 +1,0 @@
-Download a PDF version
-======================
-

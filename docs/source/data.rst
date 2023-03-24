@@ -17,7 +17,7 @@ All vector data is stored in a PostGIS database on the DDR servers. The input da
 	
 	* **Using the input package method**: All vector sources are stored in a GPKG.
 	
-**IMPORTANT:** No matter the input format, the corresponding layers in both languages projects must have a common source containing both English and French attributes.
+``IMPORTANT: No matter the input format, the corresponding layers in both languages projects must have a common source containing both English and French attributes.``
 
 2.1.2. Raster data
 ~~~~~~~~~~~~~~~~~~
