@@ -43,7 +43,7 @@ In order to publish web services with the DDR, the user needs to create one QGIS
 2.2.1. Converting from ESRI MXD file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-À remplir
+Coming on next release.
 
 .. _map-projection-ref:
 

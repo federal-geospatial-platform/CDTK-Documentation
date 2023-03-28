@@ -28,6 +28,7 @@ The DDR has 2 publication mecanisms avaiblable to its users. Each mecanism have 
 	|                   |                                                                  |                                                      |
 	+-------------------+------------------------------------------------------------------+------------------------------------------------------+
 
+``For projects with a large amount of data (over ~500 MB), the Directory Watcher should be prefered. The user may experience a lack of response from the plugin with large files. We are working on fixing this issue.``
 
 .. _qgis-plugin-ref:
 
@@ -231,4 +232,4 @@ Once connected, go in the "DDR_Directory_Watcher_Folder" folder and select your 
 3.4. System messaging
 ---------------------
 
-When the package processing is done, the DDR sends an email with the outcome of the operations (success or failure). If you don't receive the email, make sure to withelist the address ddr.fgpservices-servicespgf.rdd@aws.nrcan-rncan.cloud. If you still don't receive an email, contact the support: :ref:`help`.
+When the package processing is done, the DDR sends an email with the outcome of the operations (success or failure). If you don't receive the email, make sure to withelist the address ddr.fgpservices-servicespgf.rdd@aws.nrcan-rncan.cloud (please don't write to that unsupervised mailbox). If you still don't receive an email, contact the support: :ref:`help`.
