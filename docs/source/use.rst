@@ -49,5 +49,53 @@ The URL for the GetCapabilities is made of 5 different parts:
 4.2.2. GetMap
 ~~~~~~~~~~~~~
 
-À remplir
+The GetMap operation requests that the server generate a map. The core parameters specify one or more layers and styles to appear on the map, a bounding box for the map extent, a target spatial reference system, and a width, height, and format for the output. The information needed to specify values for parameters such as layers, styles and srs can be obtained from the Capabilities document. The response is a map image, or other map output artifact, depending on the format requested.
 
+The standard parameters for the GetMap operation are:
+
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter   | Description                                                                                                                          |
++=============+======================================================================================================================================+
+| service     | Service name. Value is WMS.                                                                                                          |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| version     | Service version. Value is 1.1.1 or 1.3.0.                                                                                            |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| request     | Operation name. Value is GetMap.                                                                                                     |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| layers      | Layers to display on map. Value is a comma-separated list of layer names. Layers names can be found in the Capabilities document.    |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| styles      | Styles in which layers are to be rendered. Value is a comma-separated list of style names, or empty if default styling is required.  |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| srs or crs  | Spatial Reference System for map output. Value is in form EPSG:nnn. crs is the parameter key used in WMS 1.3.0.                      |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| bbox        | Bounding box for map extent. Value is minx,miny,maxx,maxy in units of the SRS.                                                       |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| width       | Width of map output, in pixels.                                                                                                      |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| height      | Height of map output, in pixels.                                                                                                     |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| format      | Format for the map output. `See supported output formats`_.                                                                          |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _See supported output formats: https://docs.geoserver.org/2.22.x/en/user/services/wms/reference.html
+
+4.2.3. Other WMS Operations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+While most of the other operations available through the WMS standard are generally handled by the application used to consume the service, they can also be performed manually using a URL. Please refer to `this documentation`_ to learn more about the WMS operations.
+
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Operation        | Description                                                                                                                |
++==================+============================================================================================================================+
+| GetCapabilities  | Retrieves metadata about the service, including supported operations and parameters, and a list of the available layers.   |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+| GetMap           | Retrieves a map image for a specified area and content.                                                                    |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+| GetFeatureInfo   | Retrieves the underlying data, including geometry and attribute values, for a pixel location on a map.                     |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+| DescribeLayer    | Indicates the WFS or WCS to retrieve additional information about the layer.                                               |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+| GetLegendGraphic | Retrieves a generated legend for a map.                                                                                    |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. _this documentation: https://docs.geoserver.org/2.22.x/en/user/services/wms/reference.html
