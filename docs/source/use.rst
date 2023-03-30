@@ -21,10 +21,10 @@ If the user added a download directory, the links to the downloadable files will
 
 The QGIS Servers are able to serve data according to strandard protocols as described by the **Open Geospatial Consortium (OGC)**. Extra vendor parameters and requests are supported in addition to the original standard that greatly enhance the possibilities of customizing its behavior thanks to the QGIS rendering engine. The followings protocols are available by default when publishing a service with the DDR:
 
-	* WMS 1.1.1 and 1.3.0
-	* WFS 1.0.0 and 1.1.0
-	* WCS 1.0.0 and 1.1.1
-	* WMTS 1.0.0
+	* WMS (Web Map Service) 1.1.1 and 1.3.0
+	* WFS (Web Feature Service) 1.0.0 and 1.1.0
+	* WCS (Web Coverage Service) 1.0.0 and 1.1.1
+	* WMTS (Web Map Tile Service) 1.0.0
 	
 To get more information about the different protocols, refer to the `QGIS Server documentation`_.
 

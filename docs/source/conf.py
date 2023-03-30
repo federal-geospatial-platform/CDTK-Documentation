@@ -43,10 +43,10 @@ master_doc = 'index'
 
 html_show_sphinx = False
 
-#html_theme_options = {
-#  "navigation_depth": 4,
-#  'collapse_navigation': False
-#}
+html_theme_options = {
+  "navigation_depth": 4,
+  'collapse_navigation': False
+}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
