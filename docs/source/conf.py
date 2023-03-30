@@ -45,7 +45,8 @@ html_show_sphinx = False
 
 html_theme_options = {
   'navigation_depth': 5,
-  'collapse_navigation': False
+  'collapse_navigation': True,
+  'display_version':False,
 }
 
 # -- Options for EPUB output

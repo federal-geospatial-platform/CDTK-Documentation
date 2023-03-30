@@ -77,6 +77,8 @@ The standard parameters for the GetMap operation are:
 | format      | Format for the map output. `See supported output formats`_.                                                                          |
 +-------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
+``Example: https://qgis-stage.services.geo.ca/ows/nrcan/ddr_project_en?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=layer1&STYLES=&CRS=EPSG:3978&BBOX=-2645312,-702646,3270311,3983398&WIDTH=1680&HEIGHT=818&FORMAT=image/png``
+
 .. _See supported output formats: https://docs.geoserver.org/2.22.x/en/user/services/wms/reference.html
 
 4.2.3. Other WMS Operations
