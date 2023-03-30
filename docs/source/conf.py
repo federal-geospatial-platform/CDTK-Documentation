@@ -44,7 +44,7 @@ master_doc = 'index'
 html_show_sphinx = False
 
 html_theme_options = {
-  "navigation_depth": 4,
+  'navigation_depth': 5,
   'collapse_navigation': False
 }
 
