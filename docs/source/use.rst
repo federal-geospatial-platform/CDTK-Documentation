@@ -1,23 +1,23 @@
-4. Using the results
-====================
+Using the results
+=================
 
-4.1. Access links
------------------
+Access links
+------------
 
-4.1.1. Web services
-~~~~~~~~~~~~~~~~~~~
+Web services
+~~~~~~~~~~~~
 
 When a publication or update process completes successfuly, the user receives an email containing the links to the web services. 
 
 .. image:: media/email.png
 
-4.1.2. Downloads directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Downloads directory
+~~~~~~~~~~~~~~~~~~~
 
 If the user added a download directory, the links to the downloadable files will be sent in a separate email.
 
-4.2. Using an OGC web service
------------------------------
+Using an OGC web service
+------------------------
 
 The QGIS Servers are able to serve data according to strandard protocols as described by the **Open Geospatial Consortium (OGC)**. Extra vendor parameters and requests are supported in addition to the original standard that greatly enhance the possibilities of customizing its behavior thanks to the QGIS rendering engine. The followings protocols are available by default when publishing a service with the DDR:
 
@@ -30,8 +30,8 @@ To get more information about the different protocols, refer to the `QGIS Server
 
 .. _QGIS Server documentation: https://docs.qgis.org/3.28/en/docs/server_manual/services.html
 
-4.2.1. GetCapabilities
-~~~~~~~~~~~~~~~~~~~~~~
+GetCapabilities
+~~~~~~~~~~~~~~~
 
 The URL in the success email consists in the GetCapabilities request for the WMS protocol. It can be used to call the service within an application or map viewer. It can also be consulted as a XML in a web browser to get information about the structure and metadata of the web service.
 
@@ -46,8 +46,8 @@ The URL for the GetCapabilities is made of 5 different parts:
 	
 	.. image:: media/getcap.png
 
-4.2.2. GetMap
-~~~~~~~~~~~~~
+GetMap
+~~~~~~
 
 The GetMap operation requests that the server generate a map. The core parameters specify one or more layers and styles to appear on the map, a bounding box for the map extent, a target spatial reference system, and a width, height, and format for the output. The information needed to specify values for parameters such as layers, styles and srs can be obtained from the Capabilities document. The response is a map image, or other map output artifact, depending on the format requested.
 
@@ -81,8 +81,8 @@ The standard parameters for the GetMap operation are:
 
 .. _See supported output formats: https://docs.geoserver.org/2.22.x/en/user/services/wms/reference.html
 
-4.2.3. Other WMS Operations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Other WMS Operations
+~~~~~~~~~~~~~~~~~~~~
 
 While most of the other operations available through the WMS standard are generally handled by the application used to consume the service, they can also be performed manually using a URL. Please refer to `this documentation`_ to learn more about the WMS operations.
 

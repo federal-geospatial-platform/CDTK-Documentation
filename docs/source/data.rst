@@ -1,15 +1,15 @@
-2. Preparing the data
-=====================
+Preparing the data
+==================
 
-2.1. Data
----------
+Data
+----
 
 The user of the CDTK can use the Data Dissemination Repository (DDR) to publish web services, downloadable files and Clip-Zip-Ship collections. The DDR support most GIS data formats, but there is some minimum settings required to make the publication workflow work.
 
 .. _vector-data-ref:
 
-2.1.1. Vector data
-~~~~~~~~~~~~~~~~~~
+Vector data
+~~~~~~~~~~~
 
 All vector data is stored in a PostGIS database on the DDR servers. The input data must be contained in a OGC Geopackage (GPKG) to be ingested by the DDR. If the user is using the DDR QGIS plugin to publish the data (see section  :ref:`qgis-plugin-ref`), then the vector layers will be automatically converted to a GPKG no matter the source format. If the user chooses the input package method (see section :ref:`directory-watcher-ref`), the source of the vector layers has to be stored in a GPKG included in the package.
 
@@ -19,16 +19,16 @@ All vector data is stored in a PostGIS database on the DDR servers. The input da
 	
 ``IMPORTANT: No matter the input format, the corresponding layers in both languages projects must have a common source containing both English and French attributes.``
 
-2.1.2. Raster data
-~~~~~~~~~~~~~~~~~~
+Raster data
+~~~~~~~~~~~
 
 Any type of raster data is supported be the DDR. The data has to by stored on a web server accessible to the DDR. If the web services created are accessible publicly, the raster needs to be hosted on a public server as well. The data is not copied to the DDR servers, it remains in its original location and the web service produced calls and displays the data from its source. If the data source is not available, then the raster layer in the web service will fail to load.
 
 
 .. _qgis-project-ref:
 
-2.2. QGIS Project
------------------
+QGIS Project
+------------
 
 In order to publish web services with the DDR, the user needs to create one QGIS project file for each official language. The only format supported is ".qgs", ".qgz" is **not supported**. The projects have to be named with the following naming convention:
 
@@ -40,15 +40,15 @@ In order to publish web services with the DDR, the user needs to create one QGIS
 	* The basenames of both projects are identical (i.e.: major_projects_en and major_projects_fr).
 	* The user should not publish two projects named with the same first 15 characters (i.e.: **major_projects_**\ inventory_en and **major_projects_**\ index_en).
 
-2.2.1. Converting from ESRI MXD file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Converting from ESRI MXD file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Coming on next release.
 
 .. _map-projection-ref:
 
-2.2.2. Map and data projection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Map and data projection
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The DDR only support the 6 Coordinate Reference Systems (CRS) below. All the layers need to have the same CRS than the project.
 
@@ -68,8 +68,8 @@ The DDR only support the 6 Coordinate Reference Systems (CRS) below. All the lay
 	| 4617 | NAD83(CSRS)                                 |
 	+------+---------------------------------------------+
 
-2.2.3. Project properties
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Project properties
+~~~~~~~~~~~~~~~~~~
 
 Each project should be built with care by filling some mandatory and suggested information. Mandatory information is required to make a successful publication, while the suggested information will increase the user experience and the discoverability of your dataset. 
 
@@ -96,8 +96,8 @@ Each project should be built with care by filling some mandatory and suggested i
 	
 
 
-2.2.4. Layer properties
-~~~~~~~~~~~~~~~~~~~~~~~
+Layer properties
+~~~~~~~~~~~~~~~~
 
 As for the project properties, each layer has to be configured individually with care. If the service is published to the Clip-Zip-Ship (see :ref:`czs-ref` section), only the metadata filled in the layer properties will appear in the CZS as each layer will create an individual collection.
 
@@ -133,8 +133,8 @@ As for the project properties, each layer has to be configured individually with
 	* If the layer is time-enabled, please fill the necessary information in the "Temporal" tab.
 	
 	
-2.3. Downloads
---------------
+Downloads
+---------
 
 The CDTK includes a public FTP distribution site where the user can make files available for download. The process of uploading these files is integrated to the DDR publication mecanism. 
 

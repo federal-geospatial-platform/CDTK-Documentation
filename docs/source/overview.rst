@@ -1,5 +1,5 @@
-1. CDTK System overview
-=======================
+CDTK System overview
+====================
 
 The CDTK (CCMEO Dissemination Tool Kit) is a flexible and portable geospatial data dissemination solution that combines two web-based applications:
 
@@ -27,8 +27,8 @@ The CDTK Architecture
    :width: 2.0in
    :height: 1.0in
 
-1.1. DDR
---------
+DDR
+---
 
 The DDR application allows to Publish, Update and Delete OGC WMS to
 be served by QGIS Server. All its components are deployed in the FGP
@@ -52,7 +52,7 @@ SFTP QGIS Upload Directory and FME Directory Watcher
 
 This SFTP is a virtual directory linked to an AWS S3 bucket. A directory watcher Notification on FME Server is set to ping
 the S3 bucket every minute. If anything new has been uploaded by a user
-(:ref:`see how in this section<QGIS Desktop Plugin>`) to the bucket, the DDR_Directory_Watcher
+(:ref:`see how in this section <qgis-plugin-ref>`) to the bucket, the DDR_Directory_Watcher
 (.fmw) FME workspace is triggered. The workspace receives and parses the
 notification’s message (JSON) containing the information needed to call
 the DDR QGIS Publication API.
@@ -137,8 +137,10 @@ Input from Directory Watcher
 Input from QGIS Desktop Publication Plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.2. Clip Zip and Ship (CZS)
-----------------------------
+.. _czs-ref:
+
+Clip Zip and Ship (CZS)
+-----------------------
 
 À remplir
 

@@ -1,12 +1,12 @@
 .. _submit-ref:
 
-3. Submitting data to the DDR
-=============================
+Submitting data to the DDR
+==========================
 
 .. _publication-method-ref:
 
-3.1. Choosing a publication method
-----------------------------------
+Choosing a publication method
+-----------------------------
 
 The DDR has 2 publication mecanisms avaiblable to its users. Each mecanism have its pros and cons, it's up to the user to choose the one who better suits the operational needs. The user can switch from a publication method to another at any time.
 
@@ -32,13 +32,13 @@ The DDR has 2 publication mecanisms avaiblable to its users. Each mecanism have 
 
 .. _qgis-plugin-ref:
 
-3.2. Using the QGIS Plugin
---------------------------
+Using the QGIS Plugin
+---------------------
 
 The simpliest way to publish a web service with the DDR in to use the QGIS plugin. The plugin only works on the Government of Canada Network, make sure you are on a government network or connected trough a VPN.
 
-3.2.1. Plugin installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Plugin installation
+~~~~~~~~~~~~~~~~~~~
 	
 	1. To install the plugin, open QGIS and go to "Plugins -> Manage and Install Plugins".
 	
@@ -52,8 +52,8 @@ The simpliest way to publish a web service with the DDR in to use the QGIS plugi
 	
 	.. image:: media/qgis_install.png
 	
-3.2.2. Plugin login
-~~~~~~~~~~~~~~~~~~~
+Plugin login
+~~~~~~~~~~~~
 
 	1. To use the plugin, head to the QGIS Processing Toolbox ("Processing -> Processing Toolbox").
 	
@@ -75,8 +75,8 @@ The simpliest way to publish a web service with the DDR in to use the QGIS plugi
 
 .. _qgis-plugin-publish:
 
-3.2.3. Publish
-~~~~~~~~~~~~~~
+Publish
+~~~~~~~
 
 The first time a dataset is published to the DDR, the user needs to perform a "DDR Publish". In the "DDR Publication" tool, select "Publish Project File" and input the following parameters. To make sure the package is correctly built, it is possible to perform a validation before publishing (see :ref:`ddr-validate`).
 
@@ -100,8 +100,8 @@ The first time a dataset is published to the DDR, the user needs to perform a "D
 
 	.. image:: media/publish.png
 	
-3.2.4. Unpublish
-~~~~~~~~~~~~~~~~
+Unpublish
+~~~~~~~~~
 
 To remove a dataset from the DDR, select "Unpublish Project File" from the "DDR Publication" tool. Any corresponding collection published in the Clip-Zip-Ship will be automatically deleted by this process.
 
@@ -121,15 +121,15 @@ To remove a dataset from the DDR, select "Unpublish Project File" from the "DDR 
 
 	.. image:: media/unpublish.png
 	
-3.2.5. Update
-~~~~~~~~~~~~~
+Update
+~~~~~~
 
 The update (republish) works exactly like the publish, but it allows the user to update an existing dataset. The parameters are the same than :ref:`qgis-plugin-publish`.
 
 .. _ddr-validate:
 
-3.2.3. Validate
-~~~~~~~~~~~~~~~
+Validate
+~~~~~~~~
 
 Before sending their data to Publication, Update or Unpublication, the users can validate the content of a QGIS project file (.qgs) and its control file by using Validate. Select what process you want to validate your data for and look at the results in the Log tab.
 
@@ -137,8 +137,8 @@ Before sending their data to Publication, Update or Unpublication, the users can
 
 .. _directory-watcher-ref:
 
-3.3. Using the directory watcher
---------------------------------
+Using the directory watcher
+---------------------------
 
 The directory watcher is an alternative publication method that consists in dropping a zipped package on a sFTP server. It can be useful for projects that require frequent updates. File creation and transmission can also be scripted from end-to-end. It is also the prefered method when dealing with large datasets.
 
@@ -150,8 +150,8 @@ Files needed for a publication or update using the directory watcher:
 	* Geopackage(s) containing the data
 	* Zipped download folder [optional]
 
-3.3.1. Creating a control file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating a control file
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Instead of using a user interface, the user must set up a control file to record their instructions. `Download the template`_ and fill the required information. The file included in the package must be named exactly "ControlFile.xlsx".
 
@@ -180,8 +180,8 @@ Instead of using a user interface, the user must set up a control file to record
 	
 .. _Download the template: https://ftp.maps.canada.ca/pub/ddr_rdd/CDTK/templates_gabarits/ControlFile.xlsx
 
-3.3.2. Preparing data
-~~~~~~~~~~~~~~~~~~~~~
+Preparing data
+~~~~~~~~~~~~~~
 
 To create a complete input package, the following files must be included:
 
@@ -194,15 +194,15 @@ To create a complete input package, the following files must be included:
 ``Note: If the package is meant to publish/update only the downloads folder, clear the cells in the "Service parameters" tab of the Control file.``
 
 
-3.3.3. File packaging
-~~~~~~~~~~~~~~~~~~~~~
+File packaging
+~~~~~~~~~~~~~~
 
 The files mentioned above must be present at the root of the ZIP file (not in a subfolder). The optional download folder must be named like in the "Download folder name (ftp root folder name)" parameter of the ControlFile and then zipped.
 
 	.. image:: media/packaging.png
 
-3.3.4. Sending the package for processing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sending the package for processing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To drop an input package into the DDR, the user must have a GeoAD account and be a registered DDR user (see :ref:`help`). With your credentials in hand, use a FTP client like `FileZilla`_ to connect to the sFTP server.
 
@@ -229,7 +229,7 @@ Once connected, go in the "DDR_Directory_Watcher_Folder" folder and select your 
 
 	.. _FileZilla: https://filezilla-project.org/download.php
 
-3.4. System messaging
----------------------
+System messaging
+----------------
 
 When the package processing is done, the DDR sends an email with the outcome of the operations (success or failure). If you don't receive the email, make sure to withelist the address ddr.fgpservices-servicespgf.rdd@aws.nrcan-rncan.cloud (please don't write to that unsupervised mailbox). If you still don't receive an email, contact the support: :ref:`help`.
