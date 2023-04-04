@@ -9,6 +9,8 @@ author = 'Martin Mimeault'
 release = '0.1'
 version = '0.1.0'
 
+tls_verify = False
+
 # -- General configuration
 
 extensions = [
