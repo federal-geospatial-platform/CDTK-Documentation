@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'CDTK Documentation'
+project = 'Clip-Zip-Ship (CZS) Documentation'
 copyright = '2023, Natural resources Canada, Her Majesty the King in right of Canada'
-author = 'Martin Mimeault'
+author = 'Natural resources Canada'
 
 release = '0.1'
 version = '0.1.0'
@@ -30,7 +30,7 @@ intersphinx_disabled_domains = ['std']
 
 
 pdf_documents = [
-    ('index', 'CDTK_Documentation', 'CDTK Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
+    ('index', 'CZS_Documentation', 'CZS Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
 ]
 
 templates_path = ['_templates']
