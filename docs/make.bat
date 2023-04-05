@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
-set SPHINXOPTS=-D language=fr
+rem set SPHINXOPTS=-D language=fr
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
