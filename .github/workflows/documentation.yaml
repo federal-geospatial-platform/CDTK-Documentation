@@ -14,9 +14,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme
-          pip install importlib-metadata==6.0.0
-          pip install pyyaml==5.3.1
-          pip install zipp==3.12.1
+          pip install babel==2.11.0
+          pip install certifi==2020.6.20
+          pip install charset-normalizer==3.0.1
       - name: PDF build
         run: |
           sphinx-build -b pdf docs/source _build
