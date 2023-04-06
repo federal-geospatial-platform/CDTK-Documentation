@@ -14,9 +14,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme
-          pip install babel==2.11.0
-          pip install certifi==2020.6.20
-          pip install charset-normalizer==3.0.1
+          pip install idna==2.10
+          pip install sphinxcontrib-jquery==2.0.0
+          pip install urllib3==1.25.11
       - name: PDF build
         run: |
           sphinx-build -b pdf docs/source _build
