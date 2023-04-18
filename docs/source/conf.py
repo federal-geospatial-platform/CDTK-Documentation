@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Clip-Zip-Ship (CZS) Documentation'
-copyright = '2023, Natural resources Canada, Her Majesty the King in right of Canada'
+copyright = '2023, Natural resources Canada, His Majesty the King in right of Canada'
 author = 'Natural resources Canada'
 
 release = '0.1'
