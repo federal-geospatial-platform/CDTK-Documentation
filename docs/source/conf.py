@@ -30,7 +30,7 @@ intersphinx_disabled_domains = ['std']
 
 
 pdf_documents = [
-    ('index', 'CZS_Documentation', 'CZS Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
+    ('index', 'CZS_Documentation_en', 'CZS Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
 ]
 
 templates_path = ['_templates']
