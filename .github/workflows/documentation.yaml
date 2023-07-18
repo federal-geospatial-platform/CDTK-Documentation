@@ -8,19 +8,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - name: Install rst2pdf
+      - name: Install modules
         run: |
+          pip install --upgrade pip
           pip install rst2pdf
-      - name: Install dependencies
-        run: |
-          pip install sphinx sphinx_rtd_theme
+          pip install sphinx==6.1.3 sphinx_rtd_theme==1.2.0
           pip install sphinxcontrib-jquery==2.0.0
+          pip install sphinx-intl
       - name: PDF build
         run: |
-          sphinx-build -b pdf docs/source _build
+          sphinx-build -b pdf docs/source _build/en
+          sphinx-build -b pdf docs/source _build/fr -c docs/source/locale
       - name: Sphinx build
         run: |
-          sphinx-build docs/source _build
+          sphinx-build -b html docs/source _build/en
+          sphinx-build -b html docs/source _build/fr -c docs/source/locale
+          cp docs/index.html _build/index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
