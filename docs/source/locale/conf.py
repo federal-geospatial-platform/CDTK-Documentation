@@ -30,7 +30,7 @@ intersphinx_disabled_domains = ['std']
 
 
 pdf_documents = [
-    ('index', 'CZS_Documentation_fr', 'Documentation du Clip-Zip-Ship (CZS)', 'Ressources naturelles Canada, Centre canadien de cartographie et d’observation de la Terre, GéoDécouverte'),
+    ('czs_index', 'CZS_Documentation_fr', 'Documentation du Clip-Zip-Ship (CZS)', 'Ressources naturelles Canada, Centre canadien de cartographie et d’observation de la Terre, GéoDécouverte'),
 ]
 
 templates_path = ['../_templates_fr']
