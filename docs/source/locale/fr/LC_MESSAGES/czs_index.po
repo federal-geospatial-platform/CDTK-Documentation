@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Clip-Zip-Ship (CZS) Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-18 11:57-0400\n"
+"POT-Creation-Date: 2023-07-19 09:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../source/index.rst:5
+#: ../../source/czs_index.rst:5
 msgid "Clip-Zip-Ship (CZS) User Documentation"
 msgstr "Clip-Zip-Ship (CZS) Documentation pour les utilisateurs"
 
-#: ../../source/index.rst:8
+#: ../../source/czs_index.rst:8
 msgid "Download a PDF version of the CZS user documentation"
 msgstr "Téléchargez une version PDF de cette documentation pour les utilisateurs"
 
-#: ../../source/index.rst:10
+#: ../../source/czs_index.rst:10
 msgid ""
 "To download the latest PDF version of the CZS user documentation, `click "
 "here <https://github.com/federal-geospatial-platform/CZS-"
@@ -39,7 +39,7 @@ msgstr ""
 "ici <https://github.com/federal-geospatial-platform/CZS-"
 "Documentation/raw/gh-pages/fr/CZS_Documentation_fr.pdf>`__."
 
-#: ../../source/index.rst:14
+#: ../../source/czs_index.rst:14
 msgid "Contents"
-msgstr ""
+msgstr "Contenu"
 

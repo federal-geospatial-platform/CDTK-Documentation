@@ -33,16 +33,16 @@ pdf_documents = [
     ('index', 'CZS_Documentation_en', 'CZS Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
 ]
 
-templates_path = ['_templates']
+templates_path = ['../_templates']
 locale_dirs = ['locale']
 gettext_compact = False
 
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static'] 
-html_favicon = 'media/geoca.png'
-master_doc = 'index'
+html_static_path = ['../_static'] 
+html_favicon = '../media/geoca.png'
+master_doc = 'czs_index'
 
 html_show_sphinx = True
 
