@@ -74,6 +74,7 @@ cover/
 # Translations
 *.mo
 *.pot
+sphinx.po
 
 # Django stuff:
 *.log
