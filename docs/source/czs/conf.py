@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Documentation du Clip-Zip-Ship (CZS)'
-copyright = '2023, Ressources naturelles Canada, Sa Majesté le Roi du chef du Canada'
-author = 'Ressources naturelles Canada'
+project = 'Clip-Zip-Ship (CZS) Documentation'
+copyright = '2023, Natural resources Canada, His Majesty the King in right of Canada'
+author = 'Natural resources Canada'
 
 release = '0.1'
 version = '0.1.0'
@@ -30,18 +30,17 @@ intersphinx_disabled_domains = ['std']
 
 
 pdf_documents = [
-    ('index', 'CZS_Documentation_fr', 'Documentation du Clip-Zip-Ship (CZS)', 'Ressources naturelles Canada, Centre canadien de cartographie et d’observation de la Terre, GéoDécouverte'),
+    ('index', 'CZS_Documentation_en', 'CZS Documentation', 'Natural ressources Canada, Canada Centre for Mapping and Earth Observation, GeoDiscovery'),
 ]
 
-templates_path = ['../_templates_fr']
+templates_path = ['_templates']
 locale_dirs = ['locale']
-language = 'fr'
 gettext_compact = False
 
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['../_static'] 
+html_static_path = ['_static'] 
 html_favicon = '../media/geoca.png'
 master_doc = 'czs_index'
 

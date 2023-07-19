@@ -25,8 +25,8 @@ if errorlevel 9009 (
 
 if "%1" == "" goto help
 
-sphinx-build -b %1 %SOURCEDIR% %BUILDDIR%/en -c source/conf %2
-sphinx-build -b %1 %SOURCEDIR% %BUILDDIR%/fr -c source/locale %2
+sphinx-build -b %1 %SOURCEDIR% %BUILDDIR%/en -c source/czs %2
+sphinx-build -b %1 %SOURCEDIR% %BUILDDIR%/fr -c source/czs/conf_fr %2
 copy index.html build
 goto end
 
