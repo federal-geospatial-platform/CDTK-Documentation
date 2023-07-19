@@ -17,12 +17,12 @@ jobs:
           pip install sphinx-intl
       - name: PDF build
         run: |
-          sphinx-build -b pdf docs/source _build/en -c docs/source/czs
-          sphinx-build -b pdf docs/source _build/fr -c docs/source/czs/conf_fr
+          sphinx-build -b pdf docs/source _build/en
+          sphinx-build -b pdf docs/source _build/fr -c docs/source/locale
       - name: Sphinx build
         run: |
-          sphinx-build -b html docs/source _build/en -c docs/source/czs
-          sphinx-build -b html docs/source _build/fr -c docs/source/czs/conf_fr
+          sphinx-build -b html docs/source _build/en
+          sphinx-build -b html docs/source _build/fr -c docs/source/locale
           cp docs/index.html _build/index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
