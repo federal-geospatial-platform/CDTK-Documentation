@@ -30,6 +30,7 @@ sphinx-build -b %1 %SOURCEDIR% %BUILDDIR%/fr -c source/locale %2
 copy index.html build
 goto end
 
+
 :help
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR%
 
