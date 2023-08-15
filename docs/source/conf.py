@@ -56,5 +56,6 @@ html_theme_options = {
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
+# -- Inclure le CSS pour la doc du CDTK (boutons de langue, largeur de page)
 def setup(app):
     app.add_css_file('cdtk.css')
