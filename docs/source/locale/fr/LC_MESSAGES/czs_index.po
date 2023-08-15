@@ -27,7 +27,7 @@ msgstr "Documentation pour les utilisateurs du Clip-Zip-Ship (CZS)"
 
 #: ../../source/czs_index.rst:8
 msgid "Download a PDF version of the CZS user documentation"
-msgstr "Téléchargez une version PDF de cette documentation pour les utilisateurs"
+msgstr "Téléchargez une version PDF de la documentation pour les utilisateurs du CZS"
 
 #: ../../source/czs_index.rst:10
 msgid ""
