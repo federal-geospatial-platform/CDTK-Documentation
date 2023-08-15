@@ -45,6 +45,7 @@ html_favicon = 'media/geoca.png'
 master_doc = 'czs_index'
 
 html_show_sphinx = True
+html_copy_source = False
 
 html_theme_options = {
   'navigation_depth': 5,

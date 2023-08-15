@@ -15,12 +15,12 @@
 
   <div role="contentinfo">
   {%- block contentinfo %}
-    <p>
+    <p id="bas_page">
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {%- trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
-        <div><div class="footer-cdtk">{%- trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}</div><div class="footer-cdtk-bouton"><a class="bouton-langue" href="{{ pathto('../en/' + pagename + '.html', true)|e }}" rel="nofollow"> {{ _('English') }}</a></div></div>
+        <div><div class="footer-cdtk">{%- trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}</div><div class="footer-cdtk-bouton"><a class="bouton-langue" href="{{ pathto('../en/' + pagename + '.html', true)|e }}#bas_page" rel="nofollow"> {{ _('English') }}</a></div></div>
       {%- endif %}
     {%- endif %}
 
