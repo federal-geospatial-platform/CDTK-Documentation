@@ -1,0 +1,56 @@
+.wy-nav-content {
+    max-width: none !important;
+}
+
+a:visited 
+{
+    text-decoration: none !important;
+}
+
+.footer-cdtk {
+	width:75%;
+	display:inline-block;
+}
+
+.footer-cdtk-bouton {
+	text-align:right;
+	width:25%;
+	display:inline-block;
+}
+
+.bouton-langue {
+  background: #2980b9;
+  border-radius: 6px;
+  box-shadow: #2980b9 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #fcfcfc;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+a.bouton-langue:visited {
+    color: #fcfcfc;
+}
+
+.bouton-langue:hover {
+  background: #fcfcfc;
+  border: 2px solid #2980b9;
+  color: #2980b9;
+}
+  
+a.bouton-langue:visited:hover {
+    color: #2980b9;
+}
+
