@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Clip-Zip-Ship (CZS) Documentation 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-15 16:05-0400\n"
+"POT-Creation-Date: 2023-11-08 13:47-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -38,3 +38,8 @@ msgstr ""
 #: ../../source/czs_index.rst:14
 msgid "Contents"
 msgstr "Contenu"
+
+#: ../../source/czs_index.rst:20
+msgid "``This section is under construction.``"
+msgstr "``Cette rubrique est en construction.``"
+
